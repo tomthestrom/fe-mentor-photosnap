@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0 2.4rem;
+
+  //hide everything except logo/h1 on mobile
+  :not(:nth-child(-n + 2)) {
+    display: none;
+    opacity: 0;
+  }
+
+  &__home {
+    height: max-content;
+    width: max-content;
+    margin-right: auto;
+  }
+}

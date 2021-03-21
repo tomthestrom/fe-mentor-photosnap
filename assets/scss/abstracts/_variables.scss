@@ -1,7 +1,9 @@
 :root {
-    --color-black--pure: rgb(0, 0, 0);
-    --color-white--pure: rgb(255, 255, 255);
-    --color-grey--light: rgb(223, 223, 223);
+  --color-black--pure: rgb(0, 0, 0);
+  --color-white--pure: rgb(255, 255, 255);
+  --color-grey--light: rgb(223, 223, 223);
 
-    --color-font--default: var(--color-black--pure);
+  --color-font--default: var(--color-black--pure);
 }
+
+$btn-nav-height: 6px;

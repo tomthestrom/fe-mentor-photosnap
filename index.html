@@ -1,83 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Photosnap Website Challenge</title>
-</head>
-<body>
-<header class="header">
-
-</header>
-  Stories
-  Features
-  Pricing
-
-  Get an invite
-
-  Create and share your photo Stories
-
-  Photosnap is a platform for photographers and visual storytellers. We make it 
-  easy to share photos, tell stories and connect with others.
-
-  Beautiful stories every time
-  
-  We provide design templates to ensure your stories look terrific. Easily add 
-  photos, text, embed maps and media from other networks. Then share your story 
-  with everyone.
-
-  View the stories
-
-  Designed for everyone
-
-  Photosnap can help you create stories that resonate with your audience.  Our 
-  tool is designed for photographers of all levels, brands, businesses you name it. 
-
-  View the stories
-
-  The Mountains
-  by John Appleseed
-  Read Story
-
-  Sunset Cityscapes
-  by Benjamin Cruz
-  Read Story
-
-  18 Days Voyage
-  by Alexei Borodin
-  Read Story
-
-  Architecturals
-  by Samantha Brooke
-  Read Story
-
-  100% Responsive
-
-  No matter which the device you’re on, our site is fully responsive and stories 
-  look beautiful on any screen.
-
-  No Photo Upload Limit
-
-  Our tool has no limits on uploads or bandwidth. Freely upload in bulk and 
-  share all of your stories in one go.
-
-  Available to Embed
-
-  Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, 
-  Google Maps, and more. 
-
-  Home
-  Stories
-  Features
-  Pricing
-
-  Get an invite
-
-  Copyright 2019. All Rights Reserved
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/img/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Photosnap Website Challenge</title>
+  </head>
+  <body class="container">
+    <header class="header">
+      <a href="" class="header__home">
+        <h1>
+          <img
+            src="assets/img/shared/desktop/logo.svg"
+            alt="Photosnap Home"
+            class="header__logo"
+          />
+        </h1>
+      </a>
+      <button
+        class="btn btn--nav"
+        aria-expanded="false"
+        aria-label="Mobile Navigation Button"
+      >&nbsp;</button>
+      <nav class="nav nav--header" role="navigation">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="" class="nav__link"> Stories </a>
+          </li>
+          <li class="nav__item">
+            <a href="" class="nav__link"> Features </a>
+          </li>
+          <li class="nav__item">
+            <a href="" class="nav__link"> Pricing </a>
+          </li>
+        </ul>
+      </nav>
+      <a href="" class="cta cta--invite cta--black"> Get an invite </a>
+    </header>
+    <main class="main">
+      <div class="featured">
+        <section class="featured__1">
+          <h2 class="heading__secondary">
+            Create and share your photo Stories
+          </h2>
+          <p class="feature__text">
+            Photosnap is a platform for photographers and visual storytellers.
+            We make it easy to share photos, tell stories and connect with
+            others.
+          </p>
+          <a href="" class="cta cta--feature cta--white"> Get an invite </a>
+        </section>
+        <section class="featured__2">
+          <h2 class="heading__secondary">Beautiful stories every time</h2>
+          <p class="feature__text">
+            We provide design templates to ensure your stories look terrific.
+            Easily add photos, text, embed maps and media from other networks.
+            Then share your story with everyone.
+          </p>
+          <a href="" class="cta cta--feature cta--black"> View the stories </a>
+        </section>
+        <section class="featured__1">
+          <h2 class="heading__secondary">Designed for everyone</h2>
+          <p class="feature__text">
+            Photosnap can help you create stories that resonate with your
+            audience. Our tool is designed for photographers of all levels,
+            brands, businesses you name it.
+          </p>
+          <a href="" class="cta cta--feature cta--white"> View the stories </a>
+        </section>
+      </div>
+      <div class="stories">
+        <article class="story">
+          <h2 class="story__heading">The Mountains</h2>
+          <address class="story__author">
+            by <a href=""> John Appleseed </a>
+          </address>
+        </article>
+        <article class="story">
+          <h2 class="story__heading">Sunset Cityscapes</h2>
+          <address class="story__author">
+            by
+            <a href=""> Benjamin Cruz </a>
+          </address>
+        </article>
+        <article class="story">
+          <h2 class="story__heading">18 Days Voyage</h2>
+          <address class="story__author">
+            by
+            <a href=""> Alexei Borodin </a>
+          </address>
+        </article>
+        <article class="story">
+          <h2 class="story__heading">Architecturals</h2>
+          <address class="story__author">
+            by
+            <a href=""> Samantha Brooke </a>
+          </address>
+        </article>
+      </div>
+      <div class="features">
+        <div class="feature">
+          <strong class="feature__name"> 100% Responsive </strong>
+          <p class="feature__desc">
+            No matter which the device you’re on, our site is fully responsive
+            and stories look beautiful on any screen.
+          </p>
+        </div>
+        <div class="feature">
+          <strong class="feature__name"> No Photo Upload Limit </strong>
+          <p class="feature__desc">
+            Our tool has no limits on uploads or bandwidth. Freely upload in
+            bulk and share all of your stories in one go.
+          </p>
+        </div>
+        <div class="feature">
+          <strong class="feature__name"> Available to Embed </strong>
+          <p class="feature__desc">
+            Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube
+            videos, Google Maps, and more.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <img
+        src="assets/img/shared/desktop/logo.svg"
+        alt="Photosnap Logo"
+        class="header__logo"
+      />
+      <ul class="social-icons">
+        <li class="social-icon"></li>
+        <li class="social-icon"></li>
+        <li class="social-icon"></li>
+        <li class="social-icon"></li>
+        <li class="social-icon"></li>
+      </ul>
+      <nav class="nav nav--footer">
+        <ul class="nav__list">
+          <li class="nav__item">Home</li>
+          <li class="nav__item">Stories</li>
+          <li class="nav__item">Features</li>
+          <li class="nav__item">Pricing</li>
+        </ul>
+      </nav>
+      <a href="" class="cta cta--invite cta--white"> Get an invite </a>
+      <small class="footer__copyright">
+        Get an invite Copyright 2019. All Rights Reserved
+      </small>
+    </footer>
+  </body>
 </html>

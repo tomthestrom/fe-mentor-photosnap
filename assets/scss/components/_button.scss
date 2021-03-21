@@ -1,0 +1,34 @@
+.btn {
+  background-color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+
+  &--nav {
+    height: $btn-nav-height;
+    width: 2rem;
+
+    position: relative;
+    border: none;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 2rem;
+      height: 1px;
+      background-color: var(--color-black--pure);
+      display: inline-block;
+      position: absolute;
+      right: 0;
+    }
+
+    &::before {
+      top: calc(50% - #{$btn-nav-height} / 2);
+    }
+
+    &::after {
+      bottom: calc(50% - #{$btn-nav-height} / 2);
+    }
+  }
+}
