@@ -1,0 +1,45 @@
+.featured {
+  & > * {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    grid-template-areas:
+      "image"
+      "description";
+  }
+
+  :first-child {
+    .featured__desc {
+      background-color: var(--color-black--pure);
+      color: var(--color-white--pure);
+    }
+  }
+
+  &__desc {
+    background-color: var(--color-white--pure);
+    color: var(--color-black--pure);
+    grid-area: description;
+    padding: 7.2rem 2.4rem 7.2rem 3.3rem;
+  }
+
+  &__heading {
+    font-size: 3.2rem;
+    letter-spacing: 0.1200012em;
+    margin-bottom: 1.6rem;
+  }
+
+  &__text {
+    opacity: 0.6;
+    margin-bottom: 2.3rem;
+  }
+
+  &__img {
+    display: inline-block;
+    grid-area: image;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.nav {
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.334;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1667em;
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    &--footer {
+      color: var(--color-white--pure);
+      margin-bottom: 1.9rem;
+    }
+  }
+}

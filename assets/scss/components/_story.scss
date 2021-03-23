@@ -1,0 +1,50 @@
+.story {
+  display: block;
+  position: relative;
+  background-image: var(--gradient-story-bg);
+  &__bg {
+    height: 37.5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &--lg {
+      display: none;
+    }
+  }
+
+  &__article {
+    position: absolute;
+    bottom: 0;
+    color: var(--color-white--pure);
+    text-decoration: none;
+
+    width: 100%;
+    padding: 0 4.3rem;
+  }
+
+  &__heading {
+    font-size: 1.8rem;
+    line-height: 1.3889;
+    margin-bottom: 0.4rem;
+  }
+
+  &__author {
+    font-size: 1.3rem;
+    line-height: 1.3077;
+  }
+
+  &__cta {
+    display: flex;
+    align-items: center;
+    padding: 2rem 0 4rem;
+    margin-top: 1.6rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+
+    span {
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.1667em;
+      margin-right: auto;
+    }
+  }
+}

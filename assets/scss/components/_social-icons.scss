@@ -1,0 +1,21 @@
+.social-icons {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 15.4rem;
+
+    margin-bottom: 4.9rem;
+}
+
+.social-icon {
+    &__link {
+        display: block;
+        height: 2rem;
+        width: 2rem;
+
+        svg {
+            height: inherit;
+            width: inherit;
+        }
+    }
+}

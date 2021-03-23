@@ -8,11 +8,15 @@
 // @import "base/utilities";
 
 @import "components/button";
+@import "components/cta";
+@import "components/feature";
+@import "components/featured";
+@import "components/story";
+@import "components/social-icons";
 
 @import "layout/footer";
 @import "layout/container";
 @import "layout/header";
-// @import "layout/navigation";
+@import "layout/nav";
 
 @import "pages/home";
-
