@@ -1,6 +1,12 @@
 .stories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .features {
-   padding: 8rem 3.2rem; 
+  padding: 8rem 3.2rem;
+
+  @include respond(tablet) {
+    padding: 12rem 3.2rem;
+  }
 }

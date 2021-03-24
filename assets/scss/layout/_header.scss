@@ -3,9 +3,18 @@
   align-items: center;
   padding: 0 2.4rem;
 
+  @include respond(tablet) {
+    //wtf design
+    padding: 1.6rem 4rem 1.6rem 3.9rem;
+  }
+
   &__home {
     height: max-content;
     width: max-content;
     margin-right: auto;
+  }
+
+  &__logo {
+    display: block;
   }
 }
