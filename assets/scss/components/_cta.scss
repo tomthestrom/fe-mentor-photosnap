@@ -1,6 +1,36 @@
 .cta {
+  color: var(--color-black--pure);
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 0.1667em;
+  line-height: 1.3334;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &--white {
+    color: var(--color-white--pure);
+  }
+
+  &--bg-black {
+    background-color: var(--color-black--pure);
+  }
+
+  &--invite-arrow {
+    margin-right: 2.2rem;
+  }
+
+  &--btn {
+    font-size: 1.5rem;
+    display: inline-block;
+    padding: 1.4rem 6.8rem 1.4rem 6.9rem;
+  }
+
+  &__featured {
+    margin-right: 2.6rem;
+  }
+
   &__arrow {
-    height: 1.2rem;
+    height: 1.6rem;
     width: 4.2rem;
   }
 }

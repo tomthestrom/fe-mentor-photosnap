@@ -47,8 +47,10 @@
             <a href="#" class="nav__link"> Pricing </a>
           </li>
         </ul>
+        <div class="nav__cta">
+          <a href="#" class="cta cta--white cta--btn cta--bg-black">Get an invite</a>
+        </div>
       </nav>
-      <a href="#" class="cta cta--invite cta--black"> Get an invite </a>
     </header>
     <main class="main">
       <div class="featured">
@@ -62,7 +64,16 @@
               We make it easy to share photos, tell stories and connect with
               others.
             </p>
-            <a href="#" class="cta cta--feature cta--white">Get an invite</a>
+            <div class="featured__cta">
+              <a href="#" class="cta cta--white cta__featured">
+                Get an invite
+              </a>
+              <object
+                class="cta__arrow"
+                data="assets/img/shared/desktop/arrow-white.svg"
+                type="image/svg+xml"
+              ></object>
+            </div>
           </div>
           <picture class="featured__img">
             <source
@@ -89,9 +100,14 @@
               Easily add photos, text, embed maps and media from other networks.
               Then share your story with everyone.
             </p>
-            <a href="#" class="cta cta--feature cta--black">
-              View the stories
-            </a>
+            <div class="featured__cta">
+              <a href="#" class="cta cta__featured"> View the stories </a>
+              <svg class="cta__arrow">
+                <use
+                  xlink:href="./assets/img/shared/desktop/social-sprite.svg#arrow"
+                ></use>
+              </svg>
+            </div>
           </div>
           <picture class="featured__img">
             <source
@@ -118,9 +134,14 @@
               audience. Our tool is designed for photographers of all levels,
               brands, businesses you name it.
             </p>
-            <a href="#" class="cta cta--feature cta--white">
-              View the stories
-            </a>
+            <div class="featured__cta">
+              <a href="#" class="cta cta__featured"> View the stories </a>
+              <svg class="cta__arrow">
+                <use
+                  xlink:href="./assets/img/shared/desktop/social-sprite.svg#arrow"
+                ></use>
+              </svg>
+            </div>
           </div>
           <picture class="featured__img">
             <source
@@ -355,7 +376,7 @@
           </a>
         </li>
       </ul>
-      <nav class="nav nav--footer">
+      <nav class="footer__nav nav">
         <ul class="nav__list">
           <li class="nav__item nav__item--footer">Home</li>
           <li class="nav__item nav__item--footer">Stories</li>
@@ -363,7 +384,14 @@
           <li class="nav__item nav__item--footer">Pricing</li>
         </ul>
       </nav>
-      <a href="#" class="cta cta--invite cta--white"> Get an invite </a>
+      <div class="footer__cta">
+        <a href="#" class="cta cta--invite-arrow cta--white"> Get an invite </a>
+        <object
+          class="cta__arrow"
+          data="assets/img/shared/desktop/arrow-white.svg"
+          type="image/svg+xml"
+        ></object>
+      </div>
       <small class="footer__copyright">
         Copyright 2019. All Rights Reserved
       </small>

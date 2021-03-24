@@ -1,19 +1,55 @@
 .nav {
   font-weight: bold;
   font-size: 1.2rem;
-  line-height: 1.334;
+  line-height: 1.33334;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.1667em;
+
+  &--header {
+    display: none;
+    
+    &--open {
+      display: block;
+      position: fixed;
+      left: 0;
+      top: 7.2rem;
+
+      background-color: var(--color-white--pure);
+      width: 100vw;
+
+      &::after {
+        content: "";
+        display: block;
+        height:100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, .5);
+        position: absolute;
+      }
+    }
+  }
 
   &__list {
     list-style: none;
   }
 
   &__item {
+    margin-bottom: 2rem;
     &--footer {
       color: var(--color-white--pure);
       margin-bottom: 1.9rem;
     }
+  }
+
+  &__link {
+    color: var(--color-black--pure);
+
+    font-size: 15px;
+    text-decoration: none;
+  }
+
+  &__cta {
+    padding: 2rem 3.2rem 3.2rem;
+    border-top: 1px solid rgba(0, 0, 0, .25);
   }
 }
