@@ -1,3 +1,13 @@
+/*
+Breakpoints based on provided design files
+
+*/
+/*
+$breakpoint argument choices:
+-tablet
+-desktop
+
+*/
 :root {
   --color-black--pure: rgb(0, 0, 0);
   --color-white--pure: rgb(255, 255, 255);
@@ -27,7 +37,7 @@ body {
 
 .heading__secondary--large {
   font-size: 4rem;
-  line-height: 1.2;
+  line-height: 1.25;
   text-transform: uppercase;
   letter-spacing: 0.0959999em; }
 
@@ -142,7 +152,8 @@ body {
   .story__bg {
     height: 37.5rem;
     background-repeat: no-repeat;
-    background-position: center; }
+    background-position: center;
+    background-size: cover; }
     .story__bg--lg {
       display: none; }
   .story__article {
@@ -166,6 +177,7 @@ body {
     margin-top: 1.6rem;
     border-top: 1px solid rgba(255, 255, 255, 0.25); }
     .story__cta span {
+      font-size: 1.5rem;
       font-weight: bold;
       text-transform: uppercase;
       letter-spacing: 0.1667em;
@@ -254,8 +266,10 @@ body {
   .nav__item {
     margin-bottom: 2rem; }
     .nav__item--footer {
-      color: var(--color-white--pure);
-      margin-bottom: 1.9rem; }
+      margin-bottom: 0;
+      color: var(--color-white--pure); }
+      .nav__item--footer:not(:last-child) {
+        margin-bottom: 1.9rem; }
   .nav__link {
     color: var(--color-black--pure);
     font-size: 15px;
