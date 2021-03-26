@@ -1,6 +1,10 @@
 .stories {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
+  @include respond(desktop) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .features {
@@ -8,5 +12,12 @@
 
   @include respond(tablet) {
     padding: 12rem 3.2rem;
+  }
+
+  @include respond(desktop) {
+    display: flex;
+    max-width: 111rem;
+    padding: 13.8rem 0 12rem 0;
+    margin: 0 auto;
   }
 }

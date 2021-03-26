@@ -2,14 +2,24 @@
   display: block;
   position: relative;
   background-image: var(--gradient-story-bg);
+
   &__bg {
     height: 37.5rem;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 
+    @include respond(desktop) {
+      display: none;
+      height: 50rem;
+    }
+
     &--lg {
       display: none;
+
+      @include respond(desktop) {
+        display: block;
+      }
     }
   }
 

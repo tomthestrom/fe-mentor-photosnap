@@ -8,6 +8,7 @@
 
   &--header {
     display: none;
+    margin-right: auto;
 
     &--open {
       display: block;
@@ -28,12 +29,13 @@
       }
     }
 
+    &--open + &__cta {
+      display: block;
+    }
+
     @include respond(tablet) {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      margin-right: auto;
-      min-width: 26.9rem;
     }
   }
 
@@ -44,6 +46,18 @@
       display: flex;
       justify-content: space-between;
       width: 100%;
+
+      &--header {
+        width: 26.9rem;
+        margin-right: auto;
+      }
+    }
+
+    @include respond(desktop) {
+      &--footer {
+        flex-direction: column;
+        height: 100%;
+      }
     }
   }
 
@@ -66,6 +80,7 @@
           margin-bottom: 0;
         }
       }
+
     }
   }
 
@@ -81,14 +96,6 @@
   }
 
   &__cta {
-    padding: 2rem 3.2rem 3.2rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.25);
-
-    @include respond(tablet) {
-      padding: 0;
-      border: none;
-
-      display: inline-block;
-    }
+    display: none;
   }
 }

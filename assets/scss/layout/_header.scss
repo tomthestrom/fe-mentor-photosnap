@@ -8,6 +8,12 @@
     padding: 1.6rem 4rem 1.6rem 3.9rem;
   }
 
+  @include respond(desktop) {
+    padding: 1.6rem 0;
+    width: 77.08333%;
+    margin: 0 auto;
+  }
+
   &__home {
     height: max-content;
     width: max-content;

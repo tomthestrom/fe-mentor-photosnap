@@ -30,8 +30,39 @@
     }
   }
 
-  &__featured {
-    margin-right: 2.6rem;
+  &--header {
+    display: none;
+
+    @include respond(tablet) {
+      height: 4rem;
+      border: none;
+
+      display: inline-block;
+    }
+  }
+
+  &--featured {
+    display: flex;
+    align-items: center;
+  }
+
+  &--footer {
+    display: flex;
+    align-items: center;
+  }
+
+  &__text {
+    &--featured {
+      margin-right: 2.6rem;
+
+      @include respond(tablet) {
+        margin-right: 1.8rem;
+      }
+    }
+
+    &--footer {
+      margin-right: 1.6rem;
+    }
   }
 
   &__arrow {

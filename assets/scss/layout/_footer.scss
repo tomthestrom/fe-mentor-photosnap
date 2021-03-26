@@ -1,22 +1,38 @@
 .footer {
   background-color: var(--color-black--pure);
-  padding: 5.6rem 3.2rem;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  &__container {
+    padding: 5.6rem 3.2rem;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    @include respond(tablet) {
+      display: grid;
+      grid-template-areas:
+        "logo         cta-invite"
+        "    .           .      "
+        "navigation      .      "
+        "    .           .      "
+        "social-icons copyright";
+      grid-template-columns: 31.5rem 1fr;
+      grid-template-rows:  1.6rem 3.2rem 1.6rem 7.2rem 2rem;
+      padding: 6.4rem 4rem 6.4rem 3.9rem;
+    }
+  
+    @include respond(desktop) {
+      grid-template-areas:
+        "logo         navigation  cta-invite"
+        "social-icons       navigation     copyright";
 
-  @include respond(tablet) {
-    display: grid;
-    grid-template-areas:
-      "logo         cta-invite"
-      "    .           .      "
-      "navigation      .      "
-      "    .           .      "
-      "social-icons copyright";
-    grid-template-columns: 31.5rem 1fr;
-    grid-template-rows:  1.6rem 3.2rem 1.6rem 7.2rem 2rem;
-    padding: 6.4rem 4rem 6.4rem 3.9rem;
+      grid-template-columns: 27.9rem min-content 1fr;
+      grid-template-rows: auto;
+      row-gap: 8.6rem;
+      width: 76.6666667%;
+      margin: 0 auto;
+      padding: 6.4rem 0;
+    }
   }
 
   &__logo {
@@ -33,9 +49,14 @@
 
   &__nav {
     margin-bottom: 11.9rem;
+
     @include respond(tablet) {
       grid-area: navigation;
       margin-bottom: 0;
+    }
+
+    @include respond(desktop) {
+      height: 100%;
     }
   }
 
