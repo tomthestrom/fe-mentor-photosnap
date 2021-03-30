@@ -6,6 +6,9 @@
   --color-font--default: var(--color-black--pure);
 
   --gradient-story-bg: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0.27%, rgba(0, 0, 0, 0.661222) 100%);
+
+  --gradient-main--horizontal: linear-gradient(0.657deg, #FFC593 0%, #BC7198 43.29%, #5A77FF 83.33%);
+  --gradient-main--vertical:   linear-gradient(87.343deg, #FFC593 0%, #BC7198 43.29%, #5A77FF 83.33%);
 }
 
 $btn-nav-height: 6px;

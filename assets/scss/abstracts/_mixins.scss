@@ -9,7 +9,7 @@ $breakpoint argument choices:
 
 @mixin respond($breakpoint) {
   @if $breakpoint == tablet {
-    @media (min-width: 48em) {
+    @media (min-width: 44.5em) {
       @content;
     }
   }
