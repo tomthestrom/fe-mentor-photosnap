@@ -1,32 +1,17 @@
 {
   "name": "photosnap-multi-page-website",
-  "version": "1.0.0",
-  "description": "Photosnap challenge by Frontend Mentor",
-  "main": "index.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "watch:scss": "node-sass assets/scss/main.scss style.css -w",
-    "devserver": "live-server --browser=firefox",
-    "start": "npm-run-all --parallel devserver watch:scss",
-    "compile:scss": "node-sass scss/main.scss css/style.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
-    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
-    "build:css": "npm-run-all compile:scss prefix:css compress:css"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tomthestrom/fe-mentor-photosnap.git"
-  },
-  "author": "tomthestrom",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tomthestrom/fe-mentor-photosnap/issues"
-  },
-  "homepage": "https://github.com/tomthestrom/fe-mentor-photosnap#readme",
-  "devDependencies": {
-    "autoprefixer": "^7.1.4",
-    "concat": "^1.0.3",
-    "node-sass": "^4.5.3",
-    "npm-run-all": "^4.1.1",
-    "postcss-cli": "^4.1.1"
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "node-sass-middleware": "^0.11.0"
   }
 }
