@@ -270,6 +270,10 @@ body {
   .social-icon__link svg {
     height: inherit;
     width: inherit; }
+    .social-icon__link svg path {
+      fill: var(--color-white--pure); }
+  .social-icon__link:hover svg path {
+    fill: url(#a); }
 
 .footer {
   background-color: var(--color-black--pure); }

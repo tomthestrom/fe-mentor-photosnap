@@ -1,0 +1,29 @@
+<footer class="footer">
+  <div class="footer__container">
+    <%- include(ejsRootPath + "img/shared/desktop/logo-footer.svg", {}) %> 
+    <%- include('social-icons.ejs', {
+        socialLinks: socialLinks
+    }) %>
+    <nav class="footer__nav nav">
+      <ul class="nav__list nav__list--footer">
+        <li class="nav__item nav__item--footer">Home</li>
+        <li class="nav__item nav__item--footer">Stories</li>
+        <li class="nav__item nav__item--footer">Features</li>
+        <li class="nav__item nav__item--footer">Pricing</li>
+      </ul>
+    </nav>
+    <div class="footer__cta">
+      <a href="#" class="cta cta--white cta--footer">
+        <span class="cta__text cta__text--footer"> Get an invite </span>
+        <object
+          class="cta__arrow"
+          data="./img/shared/desktop/arrow-white.svg"
+          type="image/svg+xml"
+        ></object>
+      </a>
+    </div>
+    <small class="footer__copyright">
+      Copyright 2019. All Rights Reserved
+    </small>
+  </div>
+</footer>

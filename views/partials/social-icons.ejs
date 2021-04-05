@@ -1,0 +1,13 @@
+<ul class="footer__social-icons">
+    <% socialLinks.forEach(function(socialLink) { %>
+    <li class="social-icon">
+        <a href="#" class="social-icon__link">
+            <%# normally would go with a link and stuff, now just a name %> 
+            <% 
+            var iconPath = ejsRootPath +  "img/shared/desktop/" + socialLink + ".svg";
+            %>
+        <%- include(iconPath) %> 
+        </a>
+      </li>
+    <% }) %>
+</ul>

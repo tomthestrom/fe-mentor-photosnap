@@ -1,13 +1,21 @@
-
 .social-icon {
-    &__link {
-        display: block;
-        height: 2rem;
-        width: 2rem;
+  &__link {
+    display: block;
+    height: 2rem;
+    width: 2rem;
 
-        svg {
-            height: inherit;
-            width: inherit;
+    svg {
+      height: inherit;
+      width: inherit;
+      path {
+        fill: var(--color-white--pure);
+      }
+    }
+
+    &:hover {
+        svg path {
+            fill: url(#a);
         }
     }
+  }
 }

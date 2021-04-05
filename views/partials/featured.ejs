@@ -1,0 +1,47 @@
+<section class="featured featured__<%= order %>">
+  <div class="featured__desc">
+    <h2 class="featured__heading heading__secondary--large"><%- title %></h2>
+    <p class="featured__text"><%- text %></p>
+
+    <% if (isHomePage && order === 1) { %>
+    <div class="featured__cta">
+      <a href="#" class="cta cta--white cta--featured">
+        <span class="cta__text cta__text--featured"> Get an invite </span>
+        <object
+          class="cta__arrow"
+          data="./img/shared/desktop/arrow-white.svg"
+          type="image/svg+xml"
+        ></object>
+      </a>
+    </div>
+    <% } else if (isHomePage) { %>
+
+    <div class="featured__cta">
+      <a href="#" class="cta cta--featured">
+        <span class="cta__text cta__text--featured"> View the stories </span>
+        <svg class="cta__arrow">
+          <use
+            xlink:href="./img/shared/desktop/social-sprite.svg#arrow"
+          ></use>
+        </svg>
+      </a>
+    </div>
+
+    <% }%>
+  </div>
+  <picture class="featured__img">
+    <source
+      srcset="./img/home/mobile/<%= image %>"
+      media="(max-width: 711px)"
+    />
+    <source
+      srcset="./img/home/tablet/<%= image %>"
+      media="(max-width: 1109px)"
+    />
+    <source
+      srcset="./img/home/desktop/<%= image %>"
+      media="(min-width: 1110px)"
+    />
+    <img src="./img/home/desktop/<%= image %>" alt="<%= title %>" />
+  </picture>
+</section>
