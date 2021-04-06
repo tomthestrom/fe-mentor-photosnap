@@ -1,8 +1,6 @@
 .beta {
   background: url("img/shared/mobile/bg-beta.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  @include bg-no-rpt-cntr-cvr;
   height: 28rem;
 
   color: var(--color-white--pure);
@@ -17,16 +15,12 @@
   //@TODO - background stuff could be  in an extend
   @include respond(tablet) {
     background: url("img/shared/tablet/bg-beta.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    @include bg-no-rpt-cntr-cvr;
   }
 
   @include respond(tablet) {
     background: url("img/shared/desktop/bg-beta.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    @include bg-no-rpt-cntr-cvr;
   }
   &__container {
     padding: 6.4rem 3.2rem;
@@ -60,22 +54,6 @@
   }
 
   &:after {
-    content: "";
-    display: block;
-    position: absolute;
-    height: 0.6rem;
-    width: 34.133333%;
-    background: var(--gradient-main--horizontal);
-    top: 0;
-    left: 3.3rem;
-
-    @include respond(tablet) {
-      left: 0;
-      background: var(--gradient-main--vertical);
-      height: 100%;
-      width: 0.6rem;
-      top: 50%;
-      transform: translateY(-50%);
-    }
+    @include rainbow-gradient(100%);
   }
 }

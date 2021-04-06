@@ -5,15 +5,12 @@
 
   &__bg {
     height: 37.5rem;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    @include bg-no-rpt-cntr-cvr;
 
     @include respond(desktop) {
       display: none;
       height: 50rem;
     }
-
 
     &--lg {
       display: none;
@@ -29,9 +26,7 @@
   }
   //ugly  and does not belong here 'cause I screwed up the arch and have no will to fix it :D
   .featured__bg {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    @include bg-no-rpt-cntr-cvr;
 
     @include respond(tablet) {
       display: none;
@@ -81,7 +76,7 @@
         height: 40.6rem;
         width: 38.7rem;
         padding: 0;
-        background-color: rgba(0,0,0,0);
+        background-color: rgba(0, 0, 0, 0);
       }
 
       @include respond(desktop) {
@@ -104,24 +99,25 @@
       margin-bottom: 1.6rem;
 
       @include respond(tablet) {
-        font-size: 4rem;;
+        font-size: 4rem;
       }
     }
   }
 
-  &__author, &__date {
+  &__author,
+  &__date {
     font-size: 1.3rem;
     line-height: 1.3077;
   }
 
   &__date {
     &--featured {
-      opacity: .6;
-      margin-right: .9rem;
+      opacity: 0.6;
+      margin-right: 0.9rem;
     }
 
     &--listing {
-      margin-bottom: .4rem;
+      margin-bottom: 0.4rem;
     }
   }
 
@@ -167,7 +163,7 @@
   }
 
   &__text {
-    opacity: .6;
+    opacity: 0.6;
     margin-bottom: 2.4rem;
   }
 

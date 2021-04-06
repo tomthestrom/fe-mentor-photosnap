@@ -11,23 +11,13 @@
 
         //the gradient thing under / on the side of the desc
         &:after {
-          content: "";
-          display: block;
-          position: absolute;
-          height: 0.6rem;
-          width: 34.133333%;
-          background: var(--gradient-main--horizontal);
-          top: 0;
-          left: 3.3rem;
+          @include rainbow-gradient(46.7692308%);
+          // height: 0.6rem;
+          // width: 34.133333%;
 
-          @include respond(tablet) {
-            left: 0;
-            background: var(--gradient-main--vertical);
-            height: 29.3887755102%;
-            width: 0.6rem;
-            top: 50%;
-            transform: translateY(-50%);
-          }
+          // @include respond(tablet) {
+          //   height: 46.7692308%;
+          // }
         }
 
         &--features {

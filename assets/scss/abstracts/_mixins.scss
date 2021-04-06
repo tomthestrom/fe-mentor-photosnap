@@ -20,3 +20,29 @@ $breakpoint argument choices:
     }
   }
 }
+
+@mixin bg-no-rpt-cntr-cvr {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+} 
+
+@mixin rainbow-gradient($heightTablUp) {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0.6rem;
+  width: 34.133333%;
+  background: var(--gradient-main--horizontal);
+  top: 0;
+  left: 3.3rem;
+
+  @include respond(tablet) {
+    left: 0;
+    background: var(--gradient-main--vertical);
+    height: $heightTablUp;
+    width: 0.6rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
