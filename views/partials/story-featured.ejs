@@ -1,0 +1,46 @@
+<div class="story story--featured" href="#">
+  <div
+    class="featured__bg story__bg--featured"
+    style="
+      background-image: var(--gradient-story-bg),
+        url(./img/stories/mobile/<%= image %>);
+    "
+  ></div>
+  <div
+    class="featured__bg story__bg--md"
+    style="
+      background-image: var(--gradient-story-bg),
+        url(./img/stories/tablet/<%= image %>);
+    "
+  ></div>
+  <div
+    class="featured__bg story__bg--featured story__bg--lg"
+    style="
+      background-image: var(--gradient-story-bg),
+        url(./img/stories/desktop/<%= image %>);
+    "
+  ></div>
+  <article class="story__article story__article--featured">
+    <small class="story__last-month">
+      Last month's featured story
+    </small>
+    <h1 class="story__heading story__heading--featured"><%- heading %></h1>
+    <div class="story__meta">
+      <time class="story__date story__date--featured"><%= date %></time>
+      <span class="story__author"> by <%= author %> </span>
+    </div>
+    <p class="story__text">
+      <%= text %> 
+    </p>
+    <div class="story__cta story__cta--featured">
+      <a href="#" class="cta cta--featured cta--white">
+        <span class="cta__text cta__text--featured"> Read the story </span>
+        <svg class="cta__arrow">
+          <use
+            xlink:href="./img/shared/desktop/social-sprite.svg#arrow-white"
+          ></use>
+        </svg>
+      </a>
+    </div>
+  </article>
+</div>

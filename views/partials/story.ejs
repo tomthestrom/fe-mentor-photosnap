@@ -14,13 +14,16 @@
     "
   ></div>
   <article class="story__article">
+    <% if (!isHomePage) { %>
+      <time class="story__date story__date--listing"><%= date %></time>
+    <% } %> 
     <h2 class="story__heading"><%= heading %></h2>
     <span class="story__author"> by <%= author %> </span>
     <div class="story__cta">
       <span> Read story </span>
       <svg class="cta__arrow">
         <use
-          xlink:href="././img/shared/desktop/social-sprite.svg#arrow-white"
+          xlink:href="./img/shared/desktop/social-sprite.svg#arrow-white"
         ></use>
       </svg>
     </div>

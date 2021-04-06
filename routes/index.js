@@ -10,7 +10,6 @@ var socialCfg = require("../config/social.cfg");
 /* GET home page. */
 router.get("/", function (req, res, next) {
   res.render("index", {
-    title: "Express",
     featured: indexDB.featured,
     stories: indexDB.stories,
     features: indexDB.features,

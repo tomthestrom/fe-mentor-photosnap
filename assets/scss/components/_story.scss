@@ -14,11 +14,47 @@
       height: 50rem;
     }
 
+
     &--lg {
       display: none;
 
       @include respond(desktop) {
         display: block;
+      }
+    }
+
+    &--featured {
+      height: 31.7rem;
+    }
+  }
+  //ugly  and does not belong here 'cause I screwed up the arch and have no will to fix it :D
+  .featured__bg {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include respond(tablet) {
+      display: none;
+    }
+
+    &.story__bg--md {
+      display: none;
+      @include respond(tablet) {
+        display: block;
+        height: 65rem;
+        width: 100vw;
+      }
+      @include respond(desktop) {
+        display: none;
+      }
+    }
+
+    &.story__bg--lg {
+      display: none;
+      @include respond(desktop) {
+        display: block;
+        height: 65rem;
+        width: 100vw;
       }
     }
   }
@@ -31,17 +67,62 @@
 
     width: 100%;
     padding: 0 3.3rem;
+
+    &--featured {
+      position: unset;
+
+      background-color: var(--color-black--pure);
+      padding: 4.8rem 2.8rem;
+
+      @include respond(tablet) {
+        position: absolute;
+        top: 12.2rem;
+        left: 3.9rem;
+        height: 40.6rem;
+        width: 38.7rem;
+        padding: 0;
+        background-color: rgba(0,0,0,0);
+      }
+
+      @include respond(desktop) {
+        top: 11.6rem;
+        left: 11.2rem;
+      }
+    }
   }
 
   &__heading {
     font-size: 1.8rem;
     line-height: 1.3889;
     margin-bottom: 0.4rem;
+    letter-spacing: 0.104166666;
+
+    &--featured {
+      font-size: 3.2rem;
+      line-height: 1.25;
+      text-transform: uppercase;
+      margin-bottom: 1.6rem;
+
+      @include respond(tablet) {
+        font-size: 4rem;;
+      }
+    }
   }
 
-  &__author {
+  &__author, &__date {
     font-size: 1.3rem;
     line-height: 1.3077;
+  }
+
+  &__date {
+    &--featured {
+      opacity: .6;
+      margin-right: .9rem;
+    }
+
+    &--listing {
+      margin-bottom: .4rem;
+    }
   }
 
   &__cta {
@@ -57,6 +138,45 @@
       text-transform: uppercase;
       letter-spacing: 0.1667em;
       margin-right: auto;
+    }
+
+    &--featured {
+      border: none;
+      margin: 0;
+      padding: 0;
+
+      span {
+        margin-right: 1.6rem;
+      }
+    }
+  }
+
+  &__last-month {
+    font-size: 1.2rem;
+    line-height: 1.3334;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 1.6rem;
+    display: inline-block;
+    letter-spacing: 0.166667em;
+  }
+
+  &__meta {
+    margin-bottom: 2.4rem;
+    line-height: 1;
+  }
+
+  &__text {
+    opacity: .6;
+    margin-bottom: 2.4rem;
+  }
+
+  &--featured {
+    display: flex;
+
+    @include respond(tablet) {
+      position: relative;
+      height: 65rem;
     }
   }
 }

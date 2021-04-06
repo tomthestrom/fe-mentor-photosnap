@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %> 
+  <body class="container">
+    <%- include('./partials/header.ejs') %>
+
+    <main class="main">
+      <div class="featured-container featured-container--story">
+
+        <% featuredStories.forEach(function(featuredStory) { %>
+
+          <%- include('./partials/story-featured.ejs', {
+            heading: featuredStory.heading,
+            text: featuredStory.text,
+            author: featuredStory.author,
+            image: featuredStory.image,
+            date: featuredStory.date,
+          }) %>
+
+        <% }) %>
+      </div>
+      <div class="stories">
+        <% stories.forEach(function(story) { %>
+          <%- include('./partials/story.ejs', {
+            heading: story.heading,
+            author: story.author,
+            image: story.image,
+            date: story.date,
+          }) %>
+        <% }) %>
+      </div>
+    </main>
+    <%- include('./partials/footer.ejs', {
+      ejsRootPath: ejsRootPath,
+      socialLinks: socialLinks,
+    }) %> 
+  </body>
+</html>

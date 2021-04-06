@@ -27,9 +27,14 @@
       grid-template-columns: minmax(min-content, 42.36111%) 1fr;
     }
   }
+
+  &--story {
+
+  }
 }
 
 .stories {
+  width: 100vw;
   @include respond(tablet) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

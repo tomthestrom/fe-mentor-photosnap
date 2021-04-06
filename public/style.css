@@ -236,6 +236,32 @@ body {
       @media (min-width: 69.375em) {
         .story__bg--lg {
           display: block; } }
+    .story__bg--featured {
+      height: 31.7rem; }
+  .story .featured__bg {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+    @media (min-width: 44.5em) {
+      .story .featured__bg {
+        display: none; } }
+    .story .featured__bg.story__bg--md {
+      display: none; }
+      @media (min-width: 44.5em) {
+        .story .featured__bg.story__bg--md {
+          display: block;
+          height: 65rem;
+          width: 100vw; } }
+      @media (min-width: 69.375em) {
+        .story .featured__bg.story__bg--md {
+          display: none; } }
+    .story .featured__bg.story__bg--lg {
+      display: none; }
+      @media (min-width: 69.375em) {
+        .story .featured__bg.story__bg--lg {
+          display: block;
+          height: 65rem;
+          width: 100vw; } }
   .story__article {
     position: absolute;
     bottom: 0;
@@ -243,13 +269,44 @@ body {
     text-decoration: none;
     width: 100%;
     padding: 0 3.3rem; }
+    .story__article--featured {
+      position: unset;
+      background-color: var(--color-black--pure);
+      padding: 4.8rem 2.8rem; }
+      @media (min-width: 44.5em) {
+        .story__article--featured {
+          position: absolute;
+          top: 12.2rem;
+          left: 3.9rem;
+          height: 40.6rem;
+          width: 38.7rem;
+          padding: 0;
+          background-color: rgba(0, 0, 0, 0); } }
+      @media (min-width: 69.375em) {
+        .story__article--featured {
+          top: 11.6rem;
+          left: 11.2rem; } }
   .story__heading {
     font-size: 1.8rem;
     line-height: 1.3889;
-    margin-bottom: 0.4rem; }
-  .story__author {
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.104166666; }
+    .story__heading--featured {
+      font-size: 3.2rem;
+      line-height: 1.25;
+      text-transform: uppercase;
+      margin-bottom: 1.6rem; }
+      @media (min-width: 44.5em) {
+        .story__heading--featured {
+          font-size: 4rem; } }
+  .story__author, .story__date {
     font-size: 1.3rem;
     line-height: 1.3077; }
+  .story__date--featured {
+    opacity: .6;
+    margin-right: .9rem; }
+  .story__date--listing {
+    margin-bottom: .4rem; }
   .story__cta {
     display: flex;
     align-items: center;
@@ -262,6 +319,32 @@ body {
       text-transform: uppercase;
       letter-spacing: 0.1667em;
       margin-right: auto; }
+    .story__cta--featured {
+      border: none;
+      margin: 0;
+      padding: 0; }
+      .story__cta--featured span {
+        margin-right: 1.6rem; }
+  .story__last-month {
+    font-size: 1.2rem;
+    line-height: 1.3334;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 1.6rem;
+    display: inline-block;
+    letter-spacing: 0.166667em; }
+  .story__meta {
+    margin-bottom: 2.4rem;
+    line-height: 1; }
+  .story__text {
+    opacity: .6;
+    margin-bottom: 2.4rem; }
+  .story--featured {
+    display: flex; }
+    @media (min-width: 44.5em) {
+      .story--featured {
+        position: relative;
+        height: 65rem; } }
 
 .social-icon__link {
   display: block;
@@ -355,7 +438,7 @@ body {
 .header {
   display: flex;
   align-items: center;
-  padding: 1.6rem 2.4rem; }
+  padding: 2.8rem 2.4rem; }
   @media (min-width: 44.5em) {
     .header {
       padding: 1.6rem 4rem 1.6rem 3.9rem; } }
@@ -461,14 +544,15 @@ body {
   .featured-container :nth-child(odd) {
     grid-template-columns: minmax(min-content, 42.36111%) 1fr; } }
 
-@media (min-width: 44.5em) {
-  .stories {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); } }
-
-@media (min-width: 69.375em) {
-  .stories {
-    grid-template-columns: repeat(4, 1fr); } }
+.stories {
+  width: 100vw; }
+  @media (min-width: 44.5em) {
+    .stories {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 69.375em) {
+    .stories {
+      grid-template-columns: repeat(4, 1fr); } }
 
 .features {
   padding: 8rem 3.2rem; }
