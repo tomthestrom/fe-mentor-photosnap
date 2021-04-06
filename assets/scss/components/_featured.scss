@@ -23,10 +23,18 @@
           @include respond(tablet) {
             left: 0;
             background: var(--gradient-main--vertical);
-            height: 46.769230769%;
+            height: 29.3887755102%;
             width: 0.6rem;
             top: 50%;
             transform: translateY(-50%);
+          }
+        }
+
+        &--features {
+          &:after {
+            @include respond(tablet) {
+
+            }
           }
         }
       }
@@ -49,6 +57,12 @@
     @include respond(desktop) {
       padding: 0 18.278688525%;
       margin: 0 auto;
+    }
+
+    &--features {
+      .featured__text {
+        margin-bottom: 0;
+      }
     }
   }
 

@@ -9,7 +9,10 @@ var socialCfg = require("../config/social.cfg");
 //mock :D
 /* GET home page. */
 router.get("/", function (req, res, next) {
-  res.render("index", {
+  var TEMPLATE_NAME = "home";
+
+  res.render(TEMPLATE_NAME, {
+    templateName: TEMPLATE_NAME,
     featured: indexDB.featured,
     stories: indexDB.stories,
     features: indexDB.features,

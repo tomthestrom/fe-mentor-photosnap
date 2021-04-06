@@ -9,6 +9,7 @@
 
         <% featured.forEach(function(featuredItem, index) { %>
           <%- include('./partials/featured.ejs', {
+            templateName: templateName,
             title: featuredItem.title,
             text: featuredItem.text,
             image: featuredItem.image,
@@ -16,7 +17,7 @@
           }) %>
         <% }) %>
 
-
+      </div>
       <div class="stories">
         <% stories.forEach(function(story, index) { %>
           <%- include('./partials/story.ejs', {

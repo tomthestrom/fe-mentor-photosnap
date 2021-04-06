@@ -58,4 +58,34 @@
     padding: 13.8rem 0 12rem 0;
     margin: 0 auto;
   }
+
+  &--features {
+    padding: 6.4rem 3.2rem 9.1rem 3.2rem;
+
+    @include respond(tablet) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 7.2rem;
+      column-gap: 1.3rem;
+
+      padding: 11.2rem 3.9rem;
+
+      .feature {
+        margin-bottom: 0;
+      }
+    }
+
+    @include respond(desktop) {
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 10.4rem;
+      column-gap: 3rem;
+
+      padding: 16rem 0;
+
+
+      .feature {
+        margin-right: 0;
+      }
+    }
+  }
 }

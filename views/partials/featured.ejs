@@ -1,5 +1,5 @@
 <section class="featured featured__<%= order %>">
-  <div class="featured__desc">
+  <div class="featured__desc featured__desc--<%= viewName %>">
     <h2 class="featured__heading heading__secondary--large"><%- title %></h2>
     <p class="featured__text"><%- text %></p>
 
@@ -29,19 +29,20 @@
 
     <% }%>
   </div>
+  <%# normally would come from BE %> 
   <picture class="featured__img">
     <source
-      srcset="./img/home/mobile/<%= image %>"
+      srcset="./img/<%= viewName %>/mobile/<%= image %>"
       media="(max-width: 711px)"
     />
     <source
-      srcset="./img/home/tablet/<%= image %>"
+      srcset="./img/<%= viewName %>/tablet/<%= image %>"
       media="(max-width: 1109px)"
     />
     <source
-      srcset="./img/home/desktop/<%= image %>"
+      srcset="./img/<%= viewName %>/desktop/<%= image %>"
       media="(min-width: 1110px)"
     />
-    <img src="./img/home/desktop/<%= image %>" alt="<%= title %>" />
+    <img src="./img/<%= viewName %>/desktop/<%= image %>" alt="<%= title %>" />
   </picture>
 </section>

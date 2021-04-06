@@ -1,0 +1,81 @@
+.beta {
+  background: url("img/shared/mobile/bg-beta.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 28rem;
+
+  color: var(--color-white--pure);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  position: relative;
+
+  //@TODO - background stuff could be  in an extend
+  @include respond(tablet) {
+    background: url("img/shared/tablet/bg-beta.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @include respond(tablet) {
+    background: url("img/shared/desktop/bg-beta.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  &__container {
+    padding: 6.4rem 3.2rem;
+    @include respond(tablet) {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 6.8rem 4rem;
+    }
+
+    @include respond(desktop) {
+      max-width: 111rem;
+      padding: 6.8rem 0;
+    }
+  }
+
+  &__text {
+    font-size: 3.2rem;
+    font-weight: bold;
+    line-height: 1.25;
+    letter-spacing: 0.1em;
+    margin-bottom: 2.4rem;
+
+    @include respond(tablet) {
+      font-size: 4rem;
+      line-height: 1.2;
+      margin-right: auto;
+      margin-bottom: 0;
+      max-width: 40rem;
+    }
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 0.6rem;
+    width: 34.133333%;
+    background: var(--gradient-main--horizontal);
+    top: 0;
+    left: 3.3rem;
+
+    @include respond(tablet) {
+      left: 0;
+      background: var(--gradient-main--vertical);
+      height: 100%;
+      width: 0.6rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

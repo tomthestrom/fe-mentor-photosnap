@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %> 
+  <body class="container">
+    <%- include('./partials/header.ejs') %>
+
+    <main class="main">
+      <div class="featured-container">
+
+        <% featured.forEach(function(featuredItem, index) { %>
+          <%- include('./partials/featured.ejs', {
+            viewName: viewName,
+            title: featuredItem.title,
+            text: featuredItem.text,
+            image: featuredItem.image,
+            order: index + 1
+          }) %>
+        <% }) %>
+
+      </div>
+
+      <div class="features features--<%= viewName %>">
+        <% features.forEach(function(feature, index) { %>
+          <%- include('./partials/feature.ejs', {
+            viewName: viewName,
+            name: feature.name,
+            desc: feature.desc,
+            icon: feature.icon,
+          }) %>
+        <% }) %>
+      </div>
+    </main>
+    <%- include('./partials/announcement-beta.ejs') %> 
+
+    <%- include('./partials/footer.ejs', {
+      ejsRootPath: ejsRootPath,
+      socialLinks: socialLinks
+    }) %> 
+  </body>
+</html>

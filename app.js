@@ -6,9 +6,9 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var storiesRouter = require('./routes/stories');
+var featuresRouter = require('./routes/features');
 
 var sassMiddleWare = require('node-sass-middleware');
-const { stories } = require('./config/index-mock.cfg');
 var SRC_PATH = path.join(__dirname, '/assets/scss/');
 var DEST_PATH = __dirname + '/public/';
 
@@ -34,6 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/stories', storiesRouter);
+app.use('/features', featuresRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
