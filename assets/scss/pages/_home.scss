@@ -89,3 +89,11 @@
     }
   }
 }
+
+.plans-container {
+  padding: 6.4rem 2.8rem 6.4rem 2.9rem;
+
+  & > *:not(:last-child) {
+    margin-bottom: 2.4rem;
+  }
+}

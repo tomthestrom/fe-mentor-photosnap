@@ -12,20 +12,6 @@
         //the gradient thing under / on the side of the desc
         &:after {
           @include rainbow-gradient(46.7692308%);
-          // height: 0.6rem;
-          // width: 34.133333%;
-
-          // @include respond(tablet) {
-          //   height: 46.7692308%;
-          // }
-        }
-
-        &--features {
-          &:after {
-            @include respond(tablet) {
-
-            }
-          }
         }
       }
     }
@@ -49,7 +35,7 @@
       margin: 0 auto;
     }
 
-    &--features {
+    &--features, &--pricing {
       .featured__text {
         margin-bottom: 0;
       }

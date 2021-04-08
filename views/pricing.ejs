@@ -18,15 +18,16 @@
         <% }) %>
 
       </div>
+      <div class="plans-container">
 
-      <div class="features features--<%= viewName %>">
-        <% features.forEach(function(feature, index) { %>
-          <%- include('./partials/feature.ejs', {
-            viewName: viewName,
-            name: feature.name,
-            desc: feature.desc,
-            icon: feature.icon,
-          }) %>
+        <% plans.forEach(function(plan, index) { %>
+          <%- include('./partials/plan-card.ejs', {
+                name: plan.name,
+                desc: plan.desc,
+                priceMonth: plan.priceMonth,
+                viewName: viewName,
+            }) %>
+
         <% }) %>
       </div>
     </main>

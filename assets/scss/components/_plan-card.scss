@@ -1,0 +1,68 @@
+.plan-card {
+  padding: 5.6rem 2.1rem 4rem 2.2rem;
+  background-color: var(--color-grey--light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__text {
+    margin-bottom: 4rem;
+
+    & > * {
+      text-align: center;
+    }
+  }
+
+  &__heading {
+    font-size: 2.4rem;
+    line-height: 1.042;
+    margin-bottom: 1.8rem;
+  }
+
+  &__desc {
+    opacity: 0.6;
+  }
+
+  &__pricing {
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__price {
+    font-size: 4rem;
+    line-height: 1.2;
+  }
+
+  &__price-period {
+    opacity: 0.6;
+  }
+
+  &__pick {
+    background-color: var(--color-black--pure);
+    color: var(--color-white--pure);
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.333;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.2rem 3.72rem;
+    width: 100%;
+  }
+
+  //THE PRO PLAN
+
+  &:nth-of-type(2) {
+    background-color: var(--color-black--pure);
+    color: var(--color-white--pure);
+
+    .plan-card {
+      &__pick {
+        background-color: var(--color-white--pure);
+        color: var(--color-black--pure);
+      }
+    }
+  }
+}

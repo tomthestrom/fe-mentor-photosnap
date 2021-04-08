@@ -1,7 +1,7 @@
 :root {
   --color-black--pure: rgb(0, 0, 0);
   --color-white--pure: rgb(255, 255, 255);
-  --color-grey--light: rgb(223, 223, 223);
+  --color-grey--light: #f2f2f2;
   --color-font--default: var(--color-black--pure);
   --gradient-story-bg: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0.27%, rgba(0, 0, 0, 0.661222) 100%);
   --gradient-main--horizontal: linear-gradient(0.657deg, #FFC593 0%, #BC7198 43.29%, #5A77FF 83.33%);
@@ -255,7 +255,7 @@ body {
     .featured__desc {
       padding: 0 18.278688525%;
       margin: 0 auto; } }
-  .featured__desc--features .featured__text {
+  .featured__desc--features .featured__text, .featured__desc--pricing .featured__text {
     margin-bottom: 0; }
 
 .featured__heading {
@@ -288,6 +288,50 @@ body {
 
 .featured__cta {
   width: max-content; }
+
+.plan-card {
+  padding: 5.6rem 2.1rem 4rem 2.2rem;
+  background-color: var(--color-grey--light);
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .plan-card__text {
+    margin-bottom: 4rem; }
+    .plan-card__text > * {
+      text-align: center; }
+  .plan-card__heading {
+    font-size: 2.4rem;
+    line-height: 1.042;
+    margin-bottom: 1.8rem; }
+  .plan-card__desc {
+    opacity: 0.6; }
+  .plan-card__pricing {
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .plan-card__price {
+    font-size: 4rem;
+    line-height: 1.2; }
+  .plan-card__price-period {
+    opacity: 0.6; }
+  .plan-card__pick {
+    background-color: var(--color-black--pure);
+    color: var(--color-white--pure);
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.333;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.2rem 3.72rem;
+    width: 100%; }
+  .plan-card:nth-of-type(2) {
+    background-color: var(--color-black--pure);
+    color: var(--color-white--pure); }
+    .plan-card:nth-of-type(2) .plan-card__pick {
+      background-color: var(--color-white--pure);
+      color: var(--color-black--pure); }
 
 .story {
   display: block;
@@ -655,3 +699,8 @@ body {
         padding: 16rem 0; }
         .features--features .feature {
           margin-right: 0; } }
+
+.plans-container {
+  padding: 6.4rem 2.8rem 6.4rem 2.9rem; }
+  .plans-container > *:not(:last-child) {
+    margin-bottom: 2.4rem; }
