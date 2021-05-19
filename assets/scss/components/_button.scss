@@ -4,6 +4,7 @@
   font-size: inherit;
   line-height: inherit;
   color: inherit;
+  cursor: pointer;
 
   &--nav {
     height: $btn-nav-height;
@@ -24,15 +25,32 @@
     }
 
     &::before {
+      transition: all 0.05s;
       top: calc(50% - #{$btn-nav-height} / 2);
     }
 
     &::after {
+      transition: all 0.1s;
       bottom: calc(50% - #{$btn-nav-height} / 2);
+    }
+
+    &[aria-expanded="true"] {
+      &::after {
+        transform: rotate(-45deg);
+        transform-origin: 35%;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+        transform-origin: 30%;
+      }
     }
 
     @include respond(tablet) {
       display: none;
     }
   }
+}
+
+.btn[aria-expanded="true"] {
 }

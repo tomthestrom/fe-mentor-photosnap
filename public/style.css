@@ -113,7 +113,8 @@ body {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-  color: inherit; }
+  color: inherit;
+  cursor: pointer; }
   .btn--nav {
     height: 6px;
     width: 2rem;
@@ -128,9 +129,17 @@ body {
       position: absolute;
       right: 0; }
     .btn--nav::before {
+      transition: all 0.05s;
       top: calc(50% - 6px / 2); }
     .btn--nav::after {
+      transition: all 0.1s;
       bottom: calc(50% - 6px / 2); }
+    .btn--nav[aria-expanded="true"]::after {
+      transform: rotate(-45deg);
+      transform-origin: 35%; }
+    .btn--nav[aria-expanded="true"]::before {
+      transform: rotate(45deg);
+      transform-origin: 30%; }
     @media (min-width: 44.5em) {
       .btn--nav {
         display: none; } }
@@ -840,29 +849,29 @@ body {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.1667em; }
+  .nav--open {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 7.2rem;
+    background-color: var(--color-white--pure);
+    width: 100vw; }
+    .nav--open::after {
+      content: "";
+      display: block;
+      height: 100vh;
+      width: 100vw;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute; }
   .nav--header {
     display: none;
     margin-right: auto; }
-    .nav--header--open {
-      display: block;
-      position: fixed;
-      left: 0;
-      top: 7.2rem;
-      background-color: var(--color-white--pure);
-      width: 100vw; }
-      .nav--header--open::after {
-        content: "";
-        display: block;
-        height: 100vh;
-        width: 100vw;
-        background-color: rgba(0, 0, 0, 0.5);
-        position: absolute; }
-    .nav--header--open + .nav--header__cta {
-      display: block; }
     @media (min-width: 44.5em) {
       .nav--header {
         display: flex;
         align-items: center; } }
+  .nav--open + .nav__cta {
+    display: block; }
   .nav__list {
     list-style: none; }
     @media (min-width: 44.5em) {

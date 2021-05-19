@@ -35,7 +35,7 @@
 
     @include respond(tablet) {
       display: flex;
-      align-items: center;
+      align-items: center      display: block;
     }
   }
 
