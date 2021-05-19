@@ -14,25 +14,21 @@
       <div class="plans-container">
         <div class="plans-container__toggle">
           <div class="price-toggle__container">
-            <label class="price-toggle__label price-toggle__label--monthly" for="price-toggle-monthly">
+            <input
+              class="price-toggle__checkbox"
+              type="checkbox"
+              id="price-toggle"
+            />
+            <label
+              class="price-toggle__label"
+              for="price-toggle"
+            >
+            <span class="price-toggle__label--monthly">
               Monthly
-            </label>
-            <input
-              class="price-toggle__radio"
-              type="radio"
-              name="price-toggle"
-              id="price-toggle-monthly"
-              value="monthly"
-            />
-            <input
-              class="price-toggle__radio"
-              type="radio"
-              name="price-toggle"
-              id="price-toggle-yearly"
-              value="yearly"
-            />
-            <label class="price-toggle__label price-toggle__label--yearly" for="price-toggle-yearly">
+            </span>
+            <span class="price-toggle__label--yearly">
               Yearly
+            </span>
             </label>
           </div>
         </div>
@@ -44,32 +40,38 @@
         </div>
       </div>
       <section class="features-pricing">
-        <strong class="features-pricing__compare">
-          Compare
-        </strong>
+        <strong class="features-pricing__compare"> Compare </strong>
         <header class="features-pricing__header">
           <h2 class="features-pricing__heading">The Features</h2>
           <ul class="features-pricing__header-list">
-            <li class="features-pricing__plan-name features-pricing__plan-name--header">
+            <li
+              class="
+                features-pricing__plan-name features-pricing__plan-name--header
+              "
+            >
               Basic
             </li>
-            <li class="features-pricing__plan-name features-pricing__plan-name--header">
+            <li
+              class="
+                features-pricing__plan-name features-pricing__plan-name--header
+              "
+            >
               Pro
             </li>
-            <li class="features-pricing__plan-name features-pricing__plan-name--header">
+            <li
+              class="
+                features-pricing__plan-name features-pricing__plan-name--header
+              "
+            >
               Business
             </li>
           </ul>
         </header>
         <div class="features-pricing__table">
           <% features.forEach(function(feature, index) { %> <%-
-          include('./partials/pricing-table-row.ejs', {
-             name: feature.name,
-             basic: feature.plan_0,
-             pro: feature.plan_1,
-             business: feature.plan_2
-             }) %>
-            <% }) %>
+          include('./partials/pricing-table-row.ejs', { name: feature.name,
+          basic: feature.plan_0, pro: feature.plan_1, business: feature.plan_2
+          }) %> <% }) %>
         </div>
       </section>
     </main>

@@ -1,32 +1,82 @@
 .price-toggle {
-
   &__container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+    position: relative;
   }
-
 
   &__checkbox {
-    display: none;
-  }
-}
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
 
+    &:checked + label > .price-toggle__label--monthly {
+      color: var(--color-grey--dark);
+    }
 
-@keyframes fill-mode-toggle-btn {
-  0% {
-    height: 0;
-    width: 0;
+    &:checked + label > .price-toggle__label--yearly {
+      color: var(--color-black--pure);
+    }
+
+    &:checked + label::after {
+      background-color: var(--color-white--pure);
+      transform: translate(50%, -50%);
+    }
+
+    &:checked + label::before {
+      background-color: var(--color-black--pure);
+    }
   }
-  39% {
-    height: 0;
-    width: 0;
+
+  &__label {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 0.72;
+
+    & > * {
+      cursor: pointer;
+    }
+
+    &--monthly {
+      margin: 0 6.4rem 0 auto;
+    }
+    &--yearly {
+      margin: 0 auto 0 6.4rem;
+      color: var(--color-grey--dark);
+    }
+
+    //toggle black dot
+    &::after {
+      content: "";
+      top: 50%;
+      left: 50%;
+      transform: translate(-75%, -50%);
+      position: absolute;
+      border-radius: 50%;
+      height: 2.4rem;
+      width: 2.4rem;
+      background-color: var(--color-black--pure);
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+
+    //toggle grey box
+    &::before {
+      content: "";
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-36%, -50%);
+      height: 3.2rem;
+      width: 6.4rem;
+      background: var(--color-grey--dark);
+      border-radius: 3.2rem;
+      cursor: pointer;
+    }
   }
-  40% {
-    height: 100%;
-    width: 40%;
-  }
-  100% {
-    height: 100%;
-    width: 100%;
-  }
+
 }
