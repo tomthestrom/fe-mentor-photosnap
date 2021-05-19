@@ -6,8 +6,20 @@
         </p>
     </div>
     <div class="plan-card__pricing">
-        <b class="plan-card__price">$<%= priceMonth.toFixed(2) %> </b>
-        <span class="plan-card__price-period">per month</span>
+        <b  class="plan-card__price " 
+            data-price-value
+            data-price-value-month=<%= priceMonth.toFixed(2) %>
+            data-price-value-year=<%= priceYear.toFixed(2) %>
+            >
+            $<%= priceMonth.toFixed(2) %>
+        </b>
+        <span class="plan-card__price-period" 
+        data-price-label
+        data-price-label-month="per month"
+        data-price-label-year="per year"
+        >
+        per month
+    </span>
     </div>
     <a href="#" class="plan-card__pick">Pick plan</a>
 </div>

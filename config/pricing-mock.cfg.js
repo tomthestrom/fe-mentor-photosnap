@@ -12,19 +12,19 @@ var pricingDB = {
       name: "Basic",
       desc: "Includes basic usage of our platform. Recommended for new and aspiring photographers.",
       priceMonth: 19.00,
-      priceYear: this.priceMonth * 10,
+      priceYear: 19 * 10,
     },
     {
       name: "Pro",
       desc: "More advanced features available. Recommended for photography veterans and professionals.",
       priceMonth: 39.00,
-      priceYear: this.priceMonth * 10,
+      priceYear: 39 * 10,
     },
     {
       name: "Business",
       desc: "Additional features available such as more detailed metrics. Recommended for business owners.",
       priceMonth: 99.00,
-      priceYear: this.priceMonth * 10,
+      priceYear: 99 * 10,
     },
   ],
   features: [

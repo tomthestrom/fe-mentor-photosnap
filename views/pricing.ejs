@@ -18,6 +18,7 @@
               class="price-toggle__checkbox"
               type="checkbox"
               id="price-toggle"
+              data-price-toggle
             />
             <label
               class="price-toggle__label"
@@ -35,7 +36,8 @@
         <div class="plans-container__cards">
           <% plans.forEach(function(plan, index) { %> <%-
           include('./partials/plan-card.ejs', { name: plan.name, desc:
-          plan.desc, priceMonth: plan.priceMonth, viewName: viewName, }) %> <%
+          plan.desc, priceMonth: plan.priceMonth, priceYear: plan.priceYear,
+           viewName: viewName, }) %> <%
           }) %>
         </div>
       </div>
@@ -78,5 +80,7 @@
     <%- include('./partials/announcement-beta.ejs') %> <%-
     include('./partials/footer.ejs', { ejsRootPath: ejsRootPath, socialLinks:
     socialLinks }) %>
+    <script src="./javascripts/navbar.js"></script>
+    <script src="./javascripts/pricing.js"></script>
   </body>
 </html>
