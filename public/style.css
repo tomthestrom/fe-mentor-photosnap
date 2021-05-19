@@ -289,6 +289,135 @@ body {
 .featured__cta {
   width: max-content; }
 
+@media (min-width: 44.5em) {
+  .features-pricing {
+    max-width: 73.1rem;
+    padding: 0;
+    margin: 0 auto 11.2rem auto; } }
+
+@media (min-width: 69.375em) {
+  .features-pricing {
+    margin-bottom: 16rem; } }
+
+.features-pricing__compare {
+  display: none; }
+  @media (min-width: 44.5em) {
+    .features-pricing__compare {
+      font-size: 4rem;
+      line-height: 1.2;
+      display: flex;
+      justify-content: center;
+      text-transform: uppercase;
+      margin-bottom: 6.4rem;
+      letter-spacing: 0.1em; } }
+
+.features-pricing__header {
+  padding-bottom: 2.3rem;
+  border-bottom: 1px solid var(--color-black--pure);
+  margin-bottom: 2.3rem; }
+  @media (min-width: 44.5em) {
+    .features-pricing__header {
+      display: grid;
+      grid-template-areas: ". row-name plan-list";
+      grid-template-columns: 2.4rem 1fr calc(3 * 14rem); } }
+
+.features-pricing__header-list {
+  display: none; }
+  @media (min-width: 44.5em) {
+    .features-pricing__header-list {
+      list-style: none;
+      grid-area: plan-list;
+      justify-items: center;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "plan-basic plan-pro plan-business";
+      justify-content: space-between; } }
+
+.features-pricing__heading {
+  font-size: 1.2rem;
+  line-height: 1.25;
+  letter-spacing: 0.16666667em;
+  text-transform: uppercase; }
+  @media (min-width: 44.5em) {
+    .features-pricing__heading {
+      grid-area: row-name; } }
+
+.features-pricing__table-row {
+  padding-bottom: 2.4rem; }
+  .features-pricing__table-row:not(:last-child) {
+    border-bottom: 1px solid #dfdfdf;
+    margin-bottom: 2.3rem; }
+  @media (min-width: 44.5em) {
+    .features-pricing__table-row {
+      display: grid;
+      grid-template-areas: ". row-name plan-list";
+      grid-template-columns: 2.4rem 1fr calc(3 * 14rem); } }
+
+.features-pricing__row-name {
+  font-size: 1.2rem;
+  line-height: 1.25;
+  letter-spacing: 0.16666667em;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem; }
+  @media (min-width: 44.5em) {
+    .features-pricing__row-name {
+      grid-area: row-name;
+      margin-bottom: 0; } }
+
+.features-pricing__plan-checklist {
+  list-style: none;
+  display: flex;
+  justify-content: space-between; }
+  .features-pricing__plan-checklist:last-child {
+    margin-right: 4.6rem; }
+  @media (min-width: 44.5em) {
+    .features-pricing__plan-checklist {
+      grid-area: plan-list;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "plan-basic plan-pro plan-business";
+      justify-items: center; }
+      .features-pricing__plan-checklist:last-child {
+        margin-right: 0; } }
+
+.features-pricing__plan {
+  display: flex;
+  flex-direction: column; }
+  .features-pricing__plan:nth-child(1) {
+    grid-area: plan-basic; }
+  .features-pricing__plan:nth-child(2) {
+    grid-area: plan-pro; }
+  .features-pricing__plan:nth-child(3) {
+    grid-area: plan-business; }
+
+.features-pricing__plan-name {
+  font-size: 1rem;
+  line-height: 1.25;
+  letter-spacing: 0.16666667em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-bottom: 0.8rem; }
+  @media (min-width: 44.5em) {
+    .features-pricing__plan-name {
+      display: none; } }
+  .features-pricing__plan-name--header {
+    display: none;
+    opacity: initial;
+    margin-bottom: 0;
+    font-size: 1.2rem; }
+    @media (min-width: 44.5em) {
+      .features-pricing__plan-name--header {
+        display: block; } }
+    .features-pricing__plan-name--header:nth-child(1) {
+      grid-area: plan-basic; }
+    .features-pricing__plan-name--header:nth-child(2) {
+      grid-area: plan-pro; }
+    .features-pricing__plan-name--header:nth-child(3) {
+      grid-area: plan-business; }
+
+.features-pricing__check-icon {
+  height: 1.4rem; }
+
 .plan-card {
   padding: 5.6rem 2.1rem 4rem 2.2rem;
   background-color: var(--color-grey--light);
@@ -818,120 +947,3 @@ body {
   padding: 0 2.8rem 0 2.9rem;
   margin-bottom: 6.4rem;
   font-weight: bold; }
-  @media (min-width: 44.5em) {
-    .features-pricing {
-      max-width: 73.1rem;
-      padding: 0;
-      margin: 0 auto 11.2rem auto; } }
-  @media (min-width: 69.375em) {
-    .features-pricing {
-      margin-bottom: 16rem; } }
-  .features-pricing__compare {
-    display: none; }
-    @media (min-width: 44.5em) {
-      .features-pricing__compare {
-        font-size: 4rem;
-        line-height: 1.2;
-        display: flex;
-        justify-content: center;
-        text-transform: uppercase;
-        margin-bottom: 6.4rem;
-        letter-spacing: 0.1em; } }
-  .features-pricing__header {
-    padding-bottom: 2.3rem;
-    border-bottom: 1px solid var(--color-black--pure);
-    margin-bottom: 2.3rem; }
-    @media (min-width: 44.5em) {
-      .features-pricing__header {
-        display: grid;
-        grid-template-areas: ". row-name plan-list";
-        grid-template-columns: 2.4rem 1fr calc(3 * 14rem); } }
-  .features-pricing__header-list {
-    display: none; }
-    @media (min-width: 44.5em) {
-      .features-pricing__header-list {
-        list-style: none;
-        grid-area: plan-list;
-        justify-items: center;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: "plan-basic plan-pro plan-business";
-        justify-content: space-between; } }
-  .features-pricing__heading {
-    font-size: 1.2rem;
-    line-height: 1.25;
-    letter-spacing: 0.16666667em;
-    text-transform: uppercase; }
-    @media (min-width: 44.5em) {
-      .features-pricing__heading {
-        grid-area: row-name; } }
-  .features-pricing__table-row {
-    padding-bottom: 2.4rem; }
-    .features-pricing__table-row:not(:last-child) {
-      border-bottom: 1px solid #dfdfdf;
-      margin-bottom: 2.3rem; }
-    @media (min-width: 44.5em) {
-      .features-pricing__table-row {
-        display: grid;
-        grid-template-areas: ". row-name plan-list";
-        grid-template-columns: 2.4rem 1fr calc(3 * 14rem); } }
-  .features-pricing__row-name {
-    font-size: 1.2rem;
-    line-height: 1.25;
-    letter-spacing: 0.16666667em;
-    text-transform: uppercase;
-    margin-bottom: 1.6rem; }
-    @media (min-width: 44.5em) {
-      .features-pricing__row-name {
-        grid-area: row-name;
-        margin-bottom: 0; } }
-  .features-pricing__plan-checklist {
-    list-style: none;
-    display: flex;
-    justify-content: space-between; }
-    .features-pricing__plan-checklist:last-child {
-      margin-right: 4.6rem; }
-    @media (min-width: 44.5em) {
-      .features-pricing__plan-checklist {
-        grid-area: plan-list;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: "plan-basic plan-pro plan-business";
-        justify-items: center; }
-        .features-pricing__plan-checklist:last-child {
-          margin-right: 0; } }
-  .features-pricing__plan {
-    display: flex;
-    flex-direction: column; }
-    .features-pricing__plan:nth-child(1) {
-      grid-area: plan-basic; }
-    .features-pricing__plan:nth-child(2) {
-      grid-area: plan-pro; }
-    .features-pricing__plan:nth-child(3) {
-      grid-area: plan-business; }
-  .features-pricing__plan-name {
-    font-size: 1rem;
-    line-height: 1.25;
-    letter-spacing: 0.16666667em;
-    text-transform: uppercase;
-    opacity: 0.5;
-    margin-bottom: 0.8rem; }
-    @media (min-width: 44.5em) {
-      .features-pricing__plan-name {
-        display: none; } }
-    .features-pricing__plan-name--header {
-      display: none;
-      opacity: initial;
-      margin-bottom: 0;
-      font-size: 1.2rem; }
-      @media (min-width: 44.5em) {
-        .features-pricing__plan-name--header {
-          display: block; } }
-      .features-pricing__plan-name--header:nth-child(1) {
-        grid-area: plan-basic; }
-      .features-pricing__plan-name--header:nth-child(2) {
-        grid-area: plan-pro; }
-      .features-pricing__plan-name--header:nth-child(3) {
-        grid-area: plan-business; }
-  .features-pricing__check-icon {
-    height: 1.4rem; }

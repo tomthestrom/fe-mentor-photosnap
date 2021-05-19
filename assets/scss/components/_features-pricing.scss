@@ -1,0 +1,164 @@
+.features-pricing {
+
+  @include respond(tablet) {
+    max-width: 73.1rem;
+    padding: 0;
+    margin: 0 auto 11.2rem auto;
+  }
+
+  @include respond(desktop) {
+    margin-bottom: 16rem;
+  }
+  &__compare {
+    display: none;
+    @include respond(tablet) {
+      font-size: 4rem;
+      line-height: 1.2;
+      display: flex;
+      justify-content: center;
+      text-transform: uppercase;
+      margin-bottom: 6.4rem;
+      letter-spacing: 0.1em;
+    }
+  }
+
+  &__header {
+    padding-bottom: 2.3rem;
+    border-bottom: 1px solid var(--color-black--pure);
+    margin-bottom: 2.3rem;
+
+    @include respond(tablet) {
+      display: grid;
+      grid-template-areas: ". row-name plan-list";
+      grid-template-columns: 2.4rem 1fr calc(3 * 14rem);
+    }
+  }
+
+  &__header-list {
+    display: none;
+
+    @include respond(tablet) {
+      list-style: none;
+      grid-area: plan-list;
+      justify-items: center;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "plan-basic plan-pro plan-business";
+      justify-content: space-between;
+    }
+  }
+
+  &__heading {
+    //this font stuff could be some u-class
+    font-size: 1.2rem;
+    line-height: 1.25;
+    letter-spacing: 0.16666667em;
+    text-transform: uppercase;
+
+    @include respond(tablet) {
+      grid-area: row-name;
+    }
+  }
+
+  &__table-row {
+    padding-bottom: 2.4rem;
+    &:not(:last-child) {
+      border-bottom: 1px solid #dfdfdf;
+      margin-bottom: 2.3rem;
+    }
+
+    @include respond(tablet) {
+      display: grid;
+      grid-template-areas: ". row-name plan-list";
+      grid-template-columns: 2.4rem 1fr calc(3 * 14rem);
+    }
+  }
+
+  &__row-name {
+    font-size: 1.2rem;
+    line-height: 1.25;
+    letter-spacing: 0.16666667em;
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+
+    @include respond(tablet) {
+      grid-area: row-name;
+      margin-bottom: 0;
+    }
+  }
+
+  &__plan-checklist {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+
+    &:last-child {
+      margin-right: 4.6rem;
+    }
+
+    @include respond(tablet) {
+      &:last-child {
+        margin-right: 0;
+      }
+
+      grid-area: plan-list;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "plan-basic plan-pro plan-business";
+      justify-items: center;
+    }
+  }
+
+  &__plan {
+    display: flex;
+    flex-direction: column;
+
+    &:nth-child(1) {
+      grid-area: plan-basic;
+    }
+    &:nth-child(2) {
+      grid-area: plan-pro;
+    }
+    &:nth-child(3) {
+      grid-area: plan-business;
+    }
+  }
+
+  &__plan-name {
+    font-size: 1rem;
+    line-height: 1.25;
+    letter-spacing: 0.16666667em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-bottom: 0.8rem;
+
+    @include respond(tablet) {
+      display: none;
+    }
+
+    &--header {
+      display: none;
+      opacity: initial;
+      margin-bottom: 0;
+      font-size: 1.2rem;
+
+      @include respond(tablet) {
+        display: block;
+      }
+
+      &:nth-child(1) {
+        grid-area: plan-basic;
+      }
+      &:nth-child(2) {
+        grid-area: plan-pro;
+      }
+      &:nth-child(3) {
+        grid-area: plan-business;
+      }
+    }
+  }
+
+  &__check-icon {
+    height: 1.4rem;
+  }
+}

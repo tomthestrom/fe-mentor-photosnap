@@ -14,16 +14,26 @@
       <div class="plans-container">
         <div class="plans-container__toggle">
           <div class="price-toggle__container">
-            <label class="price-toggle__label" for="price-toggle">
-              <span class="price-toggle__label-monthly"> Monthly </span>
-              <span class="price-toggle__label-yearly"> Yearly </span>
+            <label class="price-toggle__label price-toggle__label--monthly" for="price-toggle-monthly">
+              Monthly
             </label>
             <input
-              class="price-toggle__checkbox"
-              type="checkbox"
+              class="price-toggle__radio"
+              type="radio"
               name="price-toggle"
-              id="price-toggle"
+              id="price-toggle-monthly"
+              value="monthly"
             />
+            <input
+              class="price-toggle__radio"
+              type="radio"
+              name="price-toggle"
+              id="price-toggle-yearly"
+              value="yearly"
+            />
+            <label class="price-toggle__label price-toggle__label--yearly" for="price-toggle-yearly">
+              Yearly
+            </label>
           </div>
         </div>
         <div class="plans-container__cards">
