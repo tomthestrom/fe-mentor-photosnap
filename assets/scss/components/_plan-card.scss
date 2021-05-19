@@ -5,11 +5,50 @@
   flex-direction: column;
   align-items: center;
 
+  @include respond(tablet) {
+    padding: 4rem 4.8rem 4rem 4rem;
+
+    display: grid;
+    grid-template-areas:
+      "text pricing"
+      "pick    .   ";
+    grid-template-columns: 27rem 1fr;
+  }
+
+  @include respond(desktop) {
+    grid-template-areas:
+      "text"
+      "pricing"
+      "pick";
+
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+
+    padding: 5.6rem 4rem 4rem 4rem;
+  }
+
   &__text {
     margin-bottom: 4rem;
 
     & > * {
       text-align: center;
+    }
+
+    @include respond(tablet) {
+      grid-area: text;
+      margin-bottom: 3.2rem;
+
+      & > * {
+        text-align: left;
+      }
+    }
+
+    @include respond(desktop) {
+      margin-bottom: 4rem;
+      & > * {
+        text-align: center;
+      }
     }
   }
 
@@ -28,15 +67,40 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include respond(tablet) {
+      grid-area: pricing;
+      justify-self: end;
+      align-self: flex-start;
+    }
+
+    @include respond(desktop) {
+      justify-self: center;
+    }
   }
 
   &__price {
     font-size: 4rem;
     line-height: 1.2;
+    letter-spacing: 0.10416675em;
+
+    @include respond(tablet) {
+      //so it's alligned mg right - 2* letter spacing (could be in var, but whatever)
+      margin-right: calc(2 * -0.10416675em);
+    }
+
+    @include respond(desktop) {
+      margin-right: 0;
+    }
   }
 
   &__price-period {
     opacity: 0.6;
+    @include respond(tablet) {
+      align-self: flex-end;
+    }
+    @include respond(desktop) {
+      align-self: center;
+    }
   }
 
   &__pick {
@@ -50,6 +114,10 @@
     text-transform: uppercase;
     padding: 1.2rem 3.72rem;
     width: 100%;
+
+    @include respond(tablet) {
+      grid-area: pick;
+    }
   }
 
   //THE PRO PLAN
@@ -57,11 +125,28 @@
   &:nth-of-type(2) {
     background-color: var(--color-black--pure);
     color: var(--color-white--pure);
+    position: relative;
+    @include respond(desktop) {
+      padding-top: 8.8rem;
+      padding-bottom: 7.1rem;
+    }
 
     .plan-card {
       &__pick {
         background-color: var(--color-white--pure);
         color: var(--color-black--pure);
+      }
+    }
+
+    &:after {
+      @include rainbow-gradient(100%);
+      width: 100%;
+      left: 0;
+
+      @include respond(desktop) {
+        height: 0.6rem;
+        width: 100%;
+        top: 0;
       }
     }
   }

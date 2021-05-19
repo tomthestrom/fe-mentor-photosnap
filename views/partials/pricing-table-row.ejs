@@ -1,0 +1,35 @@
+<div class="features-pricing__table-row">
+  <h3 class="features-pricing__row-name"> <%= name %></h3>
+  <ul class="features-pricing__plan-checklist">
+    <li class="features-pricing__plan">
+      <span class="features-pricing__plan-name"> Basic </span>
+      <% if (basic) { %> 
+      <object
+        class="features-pricing__check-icon"
+        data="./img/pricing/desktop/check.svg"
+        type="image/svg+xml"
+      ></object>
+      <% } %>
+    </li>
+    <li class="features-pricing__plan">
+      <span class="features-pricing__plan-name"> Pro </span>
+      <% if (pro) { %> 
+      <object
+        class="features-pricing__check-icon"
+        data="./img/pricing/desktop/check.svg"
+        type="image/svg+xml"
+      ></object>
+    </li>
+      <% } %>
+    <li class="features-pricing__plan">
+      <span class="features-pricing__plan-name"> Business </span>
+      <% if (business) { %> 
+      <object
+        class="features-pricing__check-icon"
+        data="./img/pricing/desktop/check.svg"
+        type="image/svg+xml"
+      ></object>
+      <% } %>
+    </li>
+  </ul>
+</div>

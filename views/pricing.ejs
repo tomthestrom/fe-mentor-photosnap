@@ -1,41 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('./partials/head.ejs') %> 
+  <%- include('./partials/head.ejs') %>
   <body class="container">
     <%- include('./partials/header.ejs') %>
 
     <main class="main">
       <div class="featured-container">
-
-        <% featured.forEach(function(featuredItem, index) { %>
-          <%- include('./partials/featured.ejs', {
-            viewName: viewName,
-            title: featuredItem.title,
-            text: featuredItem.text,
-            image: featuredItem.image,
-            order: index + 1
-          }) %>
-        <% }) %>
-
+        <% featured.forEach(function(featuredItem, index) { %> <%-
+        include('./partials/featured.ejs', { viewName: viewName, title:
+        featuredItem.title, text: featuredItem.text, image: featuredItem.image,
+        order: index + 1 }) %> <% }) %>
       </div>
       <div class="plans-container">
-
-        <% plans.forEach(function(plan, index) { %>
-          <%- include('./partials/plan-card.ejs', {
-                name: plan.name,
-                desc: plan.desc,
-                priceMonth: plan.priceMonth,
-                viewName: viewName,
-            }) %>
-
-        <% }) %>
+        <div class="plans-container__toggle">
+          <div class="price-toggle__container">
+            <label class="price-toggle__label" for="price-toggle">
+              <span class="price-toggle__label-monthly"> Monthly </span>
+              <span class="price-toggle__label-yearly"> Yearly </span>
+            </label>
+            <input
+              class="price-toggle__checkbox"
+              type="checkbox"
+              name="price-toggle"
+              id="price-toggle"
+            />
+          </div>
+        </div>
+        <div class="plans-container__cards">
+          <% plans.forEach(function(plan, index) { %> <%-
+          include('./partials/plan-card.ejs', { name: plan.name, desc:
+          plan.desc, priceMonth: plan.priceMonth, viewName: viewName, }) %> <%
+          }) %>
+        </div>
       </div>
+      <section class="features-pricing">
+        <strong class="features-pricing__compare">
+          Compare
+        </strong>
+        <header class="features-pricing__header">
+          <h2 class="features-pricing__heading">The Features</h2>
+          <ul class="features-pricing__header-list">
+            <li class="features-pricing__plan-name features-pricing__plan-name--header">
+              Basic
+            </li>
+            <li class="features-pricing__plan-name features-pricing__plan-name--header">
+              Pro
+            </li>
+            <li class="features-pricing__plan-name features-pricing__plan-name--header">
+              Business
+            </li>
+          </ul>
+        </header>
+        <div class="features-pricing__table">
+          <% features.forEach(function(feature, index) { %> <%-
+          include('./partials/pricing-table-row.ejs', {
+             name: feature.name,
+             basic: feature.plan_0,
+             pro: feature.plan_1,
+             business: feature.plan_2
+             }) %>
+            <% }) %>
+        </div>
+      </section>
     </main>
-    <%- include('./partials/announcement-beta.ejs') %> 
-
-    <%- include('./partials/footer.ejs', {
-      ejsRootPath: ejsRootPath,
-      socialLinks: socialLinks
-    }) %> 
+    <%- include('./partials/announcement-beta.ejs') %> <%-
+    include('./partials/footer.ejs', { ejsRootPath: ejsRootPath, socialLinks:
+    socialLinks }) %>
   </body>
 </html>
