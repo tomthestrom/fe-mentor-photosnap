@@ -7,8 +7,10 @@ navbarBtn.addEventListener("click", (e) => {
 
   if (isNotExpanded) {
     navbarBtn.setAttribute("aria-expanded", "true");
+    document.documentElement.style.overflow = "hidden";
   } else {
     navbarBtn.setAttribute("aria-expanded", "false");
+    document.documentElement.style.overflow = "auto";
   }
 
   navBar.classList.toggle(navBarOpenClass)
