@@ -826,7 +826,8 @@ body {
 .header {
   display: flex;
   align-items: center;
-  padding: 2.8rem 2.4rem; }
+  padding: 2.8rem 2.4rem;
+  z-index: 5; }
   @media (min-width: 44.5em) {
     .header {
       padding: 1.6rem 4rem 1.6rem 3.9rem; } }
@@ -849,29 +850,38 @@ body {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.1667em; }
-  .nav--open {
-    display: block;
-    position: fixed;
-    left: 0;
-    top: 7.2rem;
-    background-color: var(--color-white--pure);
-    width: 100vw; }
-    .nav--open::after {
-      content: "";
-      display: block;
-      height: 100vh;
-      width: 100vw;
-      background-color: rgba(0, 0, 0, 0.5);
-      position: absolute; }
   .nav--header {
     display: none;
     margin-right: auto; }
+    .nav--header--open {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 7.1rem;
+      padding: 3.2rem 3.2rem 0 3.2rem;
+      background-color: var(--color-white--pure);
+      width: 100vw;
+      animation: growNavbar .15s ease-out; }
+      .nav--header--open::after {
+        content: "";
+        display: block;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        margin: 0 -3.2rem 0 -3.2rem; }
+      .nav--header--open .nav__cta {
+        display: block;
+        padding-top: 2rem;
+        border-top: 1px solid var(--color-grey--dark);
+        margin-bottom: 3.2rem; }
+        .nav--header--open .nav__cta .cta {
+          width: 100%; }
     @media (min-width: 44.5em) {
       .nav--header {
         display: flex;
-        align-items: center; } }
-  .nav--open + .nav__cta {
-    display: block; }
+        align-items: center;
+        display: block; } }
   .nav__list {
     list-style: none; }
     @media (min-width: 44.5em) {
@@ -909,6 +919,17 @@ body {
         font-size: 1.2rem; } }
   .nav__cta {
     display: none; }
+
+@keyframes growNavbar {
+  0% {
+    height: 0;
+    opacity: 0;
+    overflow: hidden; }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    height: 25.3rem; } }
 
 .featured-container > * {
   display: grid;

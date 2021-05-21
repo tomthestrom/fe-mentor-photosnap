@@ -1,6 +1,6 @@
 const navbarBtn = document.querySelector("[data-btn-navbar]");
 const navBar = document.querySelector("[data-header-nav]");
-const navBarOpenClass = "nav--open";
+const navBarOpenClass = "nav--header--open";
 
 navbarBtn.addEventListener("click", (e) => {
   const isNotExpanded = navbarBtn.getAttribute("aria-expanded") === "false";

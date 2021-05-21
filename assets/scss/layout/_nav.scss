@@ -12,12 +12,14 @@
 
     &--open {
       display: block;
-      position: fixed;
+      position: absolute;
       left: 0;
-      top: 7.2rem;
+      top: 7.1rem;
+      padding: 3.2rem 3.2rem 0 3.2rem;
 
       background-color: var(--color-white--pure);
       width: 100vw;
+      animation: growNavbar .15s ease-out;
 
       &::after {
         content: "";
@@ -26,16 +28,25 @@
         width: 100vw;
         background-color: rgba(0, 0, 0, 0.5);
         position: absolute;
+        margin: 0 -3.2rem 0 -3.2rem;
       }
-    }
 
-    &--open + &__cta {
-      display: block;
+      .nav__cta {
+        display: block;
+        padding-top: 2rem;
+        border-top: 1px solid var(--color-grey--dark);
+        margin-bottom: 3.2rem;
+
+        .cta {
+          width: 100%;
+        }
+      }
     }
 
     @include respond(tablet) {
       display: flex;
-      align-items: center      display: block;
+      align-items: center;
+      display: block;
     }
   }
 
@@ -80,7 +91,6 @@
           margin-bottom: 0;
         }
       }
-
     }
   }
 
@@ -97,5 +107,22 @@
 
   &__cta {
     display: none;
+  }
+}
+
+@keyframes growNavbar {
+  0% {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    height: 25.3rem;
   }
 }
