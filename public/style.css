@@ -861,7 +861,7 @@ body {
       padding: 3.2rem 3.2rem 0 3.2rem;
       background-color: var(--color-white--pure);
       width: 100vw;
-      animation: growNavbar .15s ease-out; }
+      animation: growNavbar .2s ease-in; }
       .nav--header--open::after {
         content: "";
         display: block;
@@ -910,6 +910,9 @@ body {
         @media (min-width: 44.5em) {
           .nav__item--footer:not(:last-child) {
             margin-bottom: 0; } }
+      .nav__item--footer a, .nav__item--footer a:visited {
+        text-decoration: none;
+        color: inherit; }
   .nav__link {
     color: var(--color-black--pure);
     font-size: 1.5rem;

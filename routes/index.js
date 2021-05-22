@@ -18,7 +18,8 @@ router.get("/", function (req, res, next) {
     features: indexDB.features,
     isHomePage: true,
     ejsRootPath: ejsCfg.ejsRootPath,
-    socialLinks: socialCfg
+    socialLinks: socialCfg,
+    hostName: req.protocol + '://' + req.get('host')
   });
 });
 

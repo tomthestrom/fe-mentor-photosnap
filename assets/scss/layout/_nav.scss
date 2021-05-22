@@ -19,7 +19,7 @@
 
       background-color: var(--color-white--pure);
       width: 100vw;
-      animation: growNavbar .15s ease-out;
+      animation: growNavbar .2s ease-in;
 
       &::after {
         content: "";
@@ -90,6 +90,11 @@
         @include respond(tablet) {
           margin-bottom: 0;
         }
+      }
+
+      a, a:visited {
+        text-decoration: none;
+        color: inherit;
       }
     }
   }

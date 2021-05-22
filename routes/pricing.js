@@ -19,7 +19,8 @@ router.get("/", function (req, res, next) {
     features: pricingDB.features,
     isHomePage: false,
     ejsRootPath: ejsCfg.ejsRootPath,
-    socialLinks: socialCfg
+    socialLinks: socialCfg,
+    hostName: req.protocol + '://' + req.get('host')
   });
 });
 

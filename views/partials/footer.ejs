@@ -1,15 +1,21 @@
 <footer class="footer">
   <div class="footer__container">
-    <%- include(ejsRootPath + "img/shared/desktop/logo-footer.svg", {}) %> 
-    <%- include('social-icons.ejs', {
-        socialLinks: socialLinks
-    }) %>
+    <%- include(ejsRootPath + "img/shared/desktop/logo-footer.svg", {}) %> <%-
+    include('social-icons.ejs', { socialLinks: socialLinks }) %>
     <nav class="footer__nav nav">
       <ul class="nav__list nav__list--footer">
-        <li class="nav__item nav__item--footer">Home</li>
-        <li class="nav__item nav__item--footer">Stories</li>
-        <li class="nav__item nav__item--footer">Features</li>
-        <li class="nav__item nav__item--footer">Pricing</li>
+        <li class="nav__item nav__item--footer">
+          <a href="<%= hostName %>"> Home </a>
+        </li>
+        <li class="nav__item nav__item--footer">
+          <a href="<%= hostName %>/stories"> Stories </a>
+        </li>
+        <li class="nav__item nav__item--footer">
+          <a href="<%= hostName %>/features"> Features </a>
+        </li>
+        <li class="nav__item nav__item--footer">
+          <a href="<%= hostName %>/pricing"> Pricing </a>
+        </li>
       </ul>
     </nav>
     <div class="footer__cta">

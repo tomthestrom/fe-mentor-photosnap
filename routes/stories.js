@@ -12,7 +12,8 @@ router.get("/", function(req, res, next) {
     stories: storiesDB.stories,
     isHomePage: false,
     ejsRootPath: ejsCfg.ejsRootPath,
-    socialLinks: socialCfg
+    socialLinks: socialCfg,
+    hostName: req.protocol + '://' + req.get('host')
   });
 });
 
