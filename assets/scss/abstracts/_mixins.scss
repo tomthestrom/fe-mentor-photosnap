@@ -27,7 +27,7 @@ $breakpoint argument choices:
   background-size: cover;
 } 
 
-@mixin rainbow-gradient($heightTablUp) {
+@mixin rainbow-gradient($heightFromTabletWidth) {
   content: "";
   display: block;
   position: absolute;
@@ -39,10 +39,10 @@ $breakpoint argument choices:
 
   @include respond(tablet) {
     left: 0;
-    background: var(--gradient-main--vertical);
-    height: $heightTablUp;
-    width: 0.6rem;
     top: 50%;
+    background: var(--gradient-main--vertical);
+    height: $heightFromTabletWidth;
+    width: 0.6rem;
     transform: translateY(-50%);
   }
 }

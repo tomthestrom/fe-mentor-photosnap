@@ -47,6 +47,11 @@
     &--yearly {
       margin: 0 auto 0 6.4rem;
       color: var(--color-grey--dark);
+
+      &:hover {
+
+      color: var(--color-black--pure);
+      }
     }
 
     //toggle black dot

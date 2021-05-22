@@ -13,6 +13,12 @@
 
   &--bg-black {
     background-color: var(--color-black--pure);
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: var(--color-grey--dark);
+    }
   }
 
   &--invite-arrow {
@@ -32,6 +38,11 @@
 
   &--header {
     display: none;
+    &:hover,
+    &:active,
+    &:focus {
+      color: var(--color-black--pure);
+    }
 
     @include respond(tablet) {
       height: 4rem;
@@ -44,11 +55,21 @@
   &--featured {
     display: flex;
     align-items: center;
+    &:hover,
+    &:active,
+    &:focus a {
+      text-decoration: underline;
+    }
   }
 
   &--footer {
     display: flex;
     align-items: center;
+    &:hover,
+    &:active,
+    &:focus a {
+      text-decoration: underline;
+    }
   }
 
   &__text {

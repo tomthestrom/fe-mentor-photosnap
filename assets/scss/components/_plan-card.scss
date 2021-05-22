@@ -114,6 +114,14 @@
     text-transform: uppercase;
     padding: 1.2rem 3.72rem;
     width: 100%;
+    transition: ease-in 0.2s;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: var(--color-black--pure);
+      background-color: var(--color-grey--dark);
+    }
 
     @include respond(tablet) {
       grid-area: pick;
@@ -135,6 +143,11 @@
       &__pick {
         background-color: var(--color-white--pure);
         color: var(--color-black--pure);
+        &:hover,
+        &:active,
+        &:focus {
+          background-color: var(--color-grey--dark);
+        }
       }
     }
 

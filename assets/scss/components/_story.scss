@@ -24,6 +24,25 @@
       height: 31.7rem;
     }
   }
+  &--card {
+    transition: transform ease-in 0.2s;
+    &:hover,
+    &:focus,
+    &:active {
+      transform: translateY(-3rem);
+      &:after {
+        @include rainbow-gradient(.6rem);
+        bottom: -.6rem;
+        //rewriting mixin decl
+        top: unset !important;
+        width: 100% !important;
+        // content: "";
+        // display: block;
+        // background: var(--gradient-main--horizontal);
+        // bottom: 0;
+      }
+    }
+  }
   //ugly  and does not belong here 'cause I screwed up the arch and have no will to fix it :D
   .featured__bg {
     @include bg-no-rpt-cntr-cvr;

@@ -19,7 +19,7 @@
 
       background-color: var(--color-white--pure);
       width: 100vw;
-      animation: growNavbar .2s ease-in;
+      animation: growNavbar 0.2s ease-in;
 
       &::after {
         content: "";
@@ -92,9 +92,15 @@
         }
       }
 
-      a, a:visited {
+      a,
+      a:visited {
         text-decoration: none;
         color: inherit;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        opacity: 0.3;
       }
     }
   }
@@ -104,6 +110,12 @@
 
     font-size: 1.5rem;
     text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: 0.3;
+    }
 
     @include respond(tablet) {
       font-size: 1.2rem;
