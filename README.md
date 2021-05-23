@@ -45,8 +45,6 @@ Users should be able to:
 - [EJS](https://ejs.co/) - EJS templating language
 - [Express.js](https://expressjs.com/) - ExpressJS framework
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
-
 ### What I learned
 
 I've had the chance to play with CSS grid and ExpressJS framework. It was really useful to use EJS to display the data that was coming from the mocks I put in the folder named *config*. The most challenging part was coming back to this project after over 6 weeks.
