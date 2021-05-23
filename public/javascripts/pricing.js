@@ -24,4 +24,4 @@
   priceToggleEl.addEventListener("change", (e) => {
     updatePlanCards(e.target.checked);
   });
-});
+})();

@@ -1,8 +1,11 @@
 <section class="featured featured__<%= order %>">
   <div class="featured__desc featured__desc--<%= viewName %>">
+    <% if (isHomePage) {%>
     <h2 class="featured__heading heading__secondary--large"><%- title %></h2>
+    <% } else {%> 
+    <h1 class="featured__heading heading__secondary--large"><%- title %></h1>
+    <% }%>
     <p class="featured__text"><%- text %></p>
-
     <% if (isHomePage && order === 1) { %>
     <div class="featured__cta">
       <a href="#" class="cta cta--white cta--featured">
@@ -20,16 +23,14 @@
       <a href="#" class="cta cta--featured">
         <span class="cta__text cta__text--featured"> View the stories </span>
         <svg class="cta__arrow">
-          <use
-            xlink:href="./img/shared/desktop/social-sprite.svg#arrow"
-          ></use>
+          <use xlink:href="./img/shared/desktop/social-sprite.svg#arrow"></use>
         </svg>
       </a>
     </div>
 
     <% }%>
   </div>
-  <%# normally would come from BE %> 
+
   <picture class="featured__img">
     <source
       srcset="./img/<%= viewName %>/mobile/<%= image %>"

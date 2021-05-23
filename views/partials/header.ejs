@@ -1,12 +1,17 @@
 <header class="header">
   <a href="<%= hostName %> " class="header__home">
+    <%# if it is homepage, this is the H1.. %> 
+    <% if (isHomePage) { %>
     <h1>
+     <% } %>
       <img
         src="./img/shared/desktop/logo.svg"
         alt="Photosnap Home"
         class="header__logo"
       />
-    </h1>
+    <% if (isHomePage) { %>
+        </h1>
+    <% } %>
   </a>
   <button
     class="btn btn--nav"
