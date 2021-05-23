@@ -48,7 +48,7 @@ Users should be able to:
 ### What I learned
 
 I've had the chance to play with CSS grid and ExpressJS framework. It was really useful to use EJS to display the data that was coming from the mocks I put in the folder named *config*. The most challenging part was coming back to this project after over 6 weeks.
-In some parts - notably the container elements for the components and some component's CSS architecture could have been done better, but I wanted to move on to the next project. :)
+In some parts - notably the container elements for the components and some component's CSS architecture could have been done better, which I realised down the road, but I wanted to move on to the next project. :)
 
 
 ### Continued development
