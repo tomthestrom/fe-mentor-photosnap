@@ -36,10 +36,6 @@
         //rewriting mixin decl
         top: unset !important;
         width: 100% !important;
-        // content: "";
-        // display: block;
-        // background: var(--gradient-main--horizontal);
-        // bottom: 0;
       }
     }
   }
@@ -56,7 +52,7 @@
       @include respond(tablet) {
         display: block;
         height: 65rem;
-        width: 100vw;
+        width: 100%;
       }
       @include respond(desktop) {
         display: none;
@@ -68,7 +64,7 @@
       @include respond(desktop) {
         display: block;
         height: 65rem;
-        width: 100vw;
+        width: 100%;
       }
     }
   }

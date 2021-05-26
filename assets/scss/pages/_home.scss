@@ -27,4 +27,13 @@
       grid-template-columns: minmax(min-content, 42.36111%) 1fr;
     }
   }
+
+  &--story {
+    :nth-child(odd) {
+      @include respond(tablet) {
+        grid-template-areas: "description image";
+        grid-template-columns: 100%;
+      }
+    }
+  }
 }

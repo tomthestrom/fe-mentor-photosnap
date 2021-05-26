@@ -1,5 +1,5 @@
 .stories {
-  width: 100vw;
+  max-width: 100%;
   @include respond(tablet) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
